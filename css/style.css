@@ -82,14 +82,20 @@ h4 {
 }
 
 .sidebar-logo {
-    padding: 1.43rem;
+    padding: 14px 20px 14px 20px;
     background-color: #212529;
 }
 
 .sidebar-logo a {
     color: #e9ecef;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
+}
+
+.logo-img {
+    width: 45px;
+    border-radius: 100%;
+    margin-right: 7px;
 }
 
 .sidebar-nav {
@@ -105,6 +111,18 @@ h4 {
     padding: 30px 14px 14px 0;
 }
 
+.sidebar-subs {
+    padding: 10px 35px 10px 30px;
+    color: #606970;
+    position: relative;
+    display: block;
+    font-size: 0.875rem;
+}
+
+.sidebar-subs:hover {
+    color: #0d6efd;
+}
+
 a.sidebar-link {
     padding: 10px 35px 10px 15px;
     color: #606970;
@@ -114,7 +132,7 @@ a.sidebar-link {
 }
 
 a.sidebar-link:hover {
-    color: blue;
+    color: #0d6efd;
 }
 
 .sidebar-link[data-bs-toggle="collapse"]::after {
