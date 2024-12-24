@@ -57,12 +57,12 @@
                         </a>
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-subs">
+                                <a href="?page=data_buku" class="sidebar-subs">
                                     <i class="fa-solid fa-book pe-2"></i>
                                     Data Buku</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-subs">
+                                <a href="?page=data_anggota" class="sidebar-subs">
                                     <i class="fa-solid fa-users pe-2"></i>
                                     Data Anggota</a>
                             </li>
@@ -152,8 +152,14 @@
                                 case 'admin':
                                     include "pages/admin/dashboard.php";
                                     break;
+                                case 'data_buku':
+                                    include "pages/admin/buku/data_buku.php";
+                                    break;
+                                case 'data_anggota':
+                                    include "pages/admin/anggota/data_anggota.php";
+                                    break;
                                 case 'data_sirkul':
-                                    include "pages/admin/data_sirkul.php";
+                                    include "pages/admin/sirkulasi/data_sirkul.php";
                                     break;
                                 default:
                                     echo "<center><br><br><br><br><br><br><br><br><br>

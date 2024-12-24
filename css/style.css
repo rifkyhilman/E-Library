@@ -60,17 +60,22 @@ h4 {
     background: #edf1f5;
 }
 
-.nav-link {
+.nav-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: 10px -38px 30px -40px; */
+    margin: 10px -38px 30px -42px;
     padding: 20px 10px 10px 10px;
     background: #fff;
 }
 
-.nav-link h5 {
+.nav-links h5 {
+    padding-left: 30px;
     color: #212529;
+}
+
+.nav-links ol {
+    padding-right: 30px;
 }
 
 

@@ -1,5 +1,5 @@
 <section class="container">
-    <div class="nav-link">
+    <div class="nav-links">
         <h5>Admin Dashboard</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
