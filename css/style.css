@@ -64,7 +64,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px -27px 30px -27px;
+    /* margin: 10px -38px 30px -40px; */
     padding: 20px 10px 10px 10px;
     background: #fff;
 }
@@ -167,6 +167,10 @@ a.sidebar-link:hover {
 
 .navbar-expand .navbar-nav {
     margin-left: auto;
+}
+
+.navbar span {
+    text-transform: uppercase;
 }
 
 .content {

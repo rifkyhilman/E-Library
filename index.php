@@ -1,3 +1,20 @@
+<?php
+    //KONEKSI DB
+    include "db/conn.php";
+
+    //Mulai Sesion
+    session_start();
+    if (isset($_SESSION["ses_username"]) == "") {
+        header("location: auth/login.php");
+    } else {
+        $data_id = $_SESSION["ses_id"];
+        $data_nama = $_SESSION["ses_nama"];
+        $data_user = $_SESSION["ses_username"];
+        $data_level = $_SESSION["ses_level"];
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
@@ -17,7 +34,7 @@
             <!-- Content For Sidebar -->
             <div class="h-100">
                 <div class="sidebar-logo">
-                    <a href="#">
+                    <a href="index.php">
                         <img src="images/logo-smait.png" class="logo-img" alt="">
                         <span>E-Library</span>
                     </a>
@@ -27,7 +44,7 @@
                         --- MENU ADMIN
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="?page=admin" class="sidebar-link">
                             <i class="fa-solid fa-gauge pe-2"></i>
                             Dashboard
                         </a>
@@ -52,7 +69,7 @@
                         </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link" aria-expanded="false">
+                        <a href="?page=data_sirkul" class="sidebar-link" aria-expanded="false">
                             <i class="fa-solid fa-repeat pe-2"></i>
                             Sirkulasi
                         </a>
@@ -107,17 +124,19 @@
         <div class="main">
             <nav class="navbar navbar-expand px-3 border-bottom">
                 <button class="btn" id="sidebar-toggle" type="button">
-                    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="navbar-collapse navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
                                 <img src="images/profile.jpg" class="avatar" alt="">
-                                <span class="profile-name">Admin</span>
+                                <span class="profile-name">
+        							<?php echo $data_nama; ?>
+                                </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a href="#" class="dropdown-item">Logout</a>
+                                <a href="auth/logout.php" onclick="return confirm('Anda yakin keluar dari aplikasi ?')" class="dropdown-item">Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -125,35 +144,31 @@
             </nav>
             <main class="content px-3 py-2">
                 <div class="container-fluid">
-                    <div class="nav-link">
-                        <h5>Admin Dashboard</h5>
-                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="#">Home</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Library</li>
-                            </ol>
-                        </nav>                          
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6 d-flex">
-                            <div class="card flex-fill border-0 illustration">
-                                <div class="card-body p-0 d-flex flex-fill">
-                                    <div class="row g-0 w-100">
-                                        <div class="col-6">
-                                            <div class="p-3 m-1">
-                                                <h4>Welcome Back, Admin</h4>
-                                                <p class="mb-0">Admin Dashboard, CodzSword</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 align-self-end text-end">
-                                            <img src="images/customer-support.jpg" class="img-fluid illustration-img"
-                                                alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        if (isset($_GET['page'])) {
+                            $hal = $_GET['page'];
+
+                            switch ($hal) {
+                                case 'admin':
+                                    include "pages/admin/dashboard.php";
+                                    break;
+                                case 'data_sirkul':
+                                    include "pages/admin/data_sirkul.php";
+                                    break;
+                                default:
+                                    echo "<center><br><br><br><br><br><br><br><br><br>
+                                    <h1> Halaman tidak ditemukan !</h1></center>";
+                                    break;
+                            }
+                        } else {
+                            // Auto Halaman Home Pengguna
+                            if ($data_level == "Administrator") {
+                                include "pages/admin/dashboard.php";
+                            } elseif ($data_level == "Petugas") {
+                                include "home/petugas.php";
+                            }
+                        }
+				    ?>
                 </div>
             </main>
             <footer class="footer">
