@@ -82,13 +82,13 @@
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-subs">
+                                <a href="?page=log_pinjam" class="sidebar-subs">
                                     <i class="fa-solid fa-arrow-up pe-2"></i>
                                     Peminjaman
                                 </a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-subs">
+                                <a href="?page=log_kembali" class="sidebar-subs">
                                     <i class="fa-solid fa-arrow-down pe-2"></i>
                                     Pengembalian
                                 </a>
@@ -160,6 +160,12 @@
                                     break;
                                 case 'data_sirkul':
                                     include "pages/admin/sirkulasi/data_sirkul.php";
+                                    break;
+                                case 'log_pinjam':
+                                    include "pages/admin/log/log_pinjam.php";
+                                    break;
+                                case 'log_kembali':
+                                    include "pages/admin/log/log_kembali.php";
                                     break;
                                 default:
                                     echo "<center><br><br><br><br><br><br><br><br><br>
