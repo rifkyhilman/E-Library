@@ -5,7 +5,7 @@
     //Mulai Sesion
     session_start();
     if (isset($_SESSION["ses_username"]) == "") {
-        header("location: auth/login.php");
+        header("location: pages/auth/login.php");
     } else {
         $data_id = $_SESSION["ses_id"];
         $data_nama = $_SESSION["ses_nama"];
@@ -23,6 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Library</title>
+    <link rel="icon" href="images/logo-smait.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
@@ -136,7 +137,7 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a href="auth/logout.php" onclick="return confirm('Anda yakin keluar dari aplikasi ?')" class="dropdown-item">Logout</a>
+                                <a href="pages/auth/logout.php" onclick="return confirm('Anda yakin keluar dari aplikasi ?')" class="dropdown-item">Logout</a>
                             </div>
                         </li>
                     </ul>
