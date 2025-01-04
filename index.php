@@ -16,17 +16,22 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Library</title>
+
     <link rel="icon" href="images/logo-smait.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <title>E-Library</title>
 </head>
 
 <body>
@@ -40,7 +45,7 @@
                         <span>E-Library</span>
                     </a>
                 </div>
-                <ul class="sidebar-nav">
+                <ul class="sidebar-nav"> 
                     <li class="sidebar-header">
                         --- MENU ADMIN
                     </li>
@@ -70,7 +75,7 @@
                         </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="?page=data_sirkul" class="sidebar-link" aria-expanded="false">
+                        <a href="?page=data_sirkul" class="sidebar-link" aria-expanded="false"> 
                             <i class="fa-solid fa-repeat pe-2"></i>
                             Sirkulasi
                         </a>
@@ -123,9 +128,9 @@
             </div>
         </aside>
         <div class="main">
-            <nav class="navbar navbar-expand px-3 border-bottom">
+            <nav class="navbar navbar-expand px-3 border-bottom navbar-main">
                 <button class="btn" id="sidebar-toggle" type="button">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars" style="color: #ffff"></i>
                 </button>
                 <div class="navbar-collapse navbar">
                     <ul class="navbar-nav">
@@ -137,7 +142,7 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a href="pages/auth/logout.php" onclick="return confirm('Anda yakin keluar dari aplikasi ?')" class="dropdown-item">Logout</a>
+                                <a href="pages/auth/logout.php" class="dropdown-item">Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -199,8 +204,32 @@
             </footer>
         </div>
     </div>
+    <script src="./js/script.js" type="module"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+        $(function() {
+            $("#example1").DataTable({
+                columnDefs: [{
+                    "defaultContent": "-",
+                    "targets": "_all"
+                }]
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false
+            });
+        });
+	</script>
 </body>
 
 </html>

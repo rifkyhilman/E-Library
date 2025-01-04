@@ -91,7 +91,8 @@
 			$_SESSION["ses_level"]=$data_login["level"];
 
 			echo "<script>
-				Swal.fire({title: 'Login Berhasil',
+				Swal.fire({
+                    title: 'Login Berhasil',
 					text: '',
 					icon: 'success',
 					confirmButtonText: 'OK'

@@ -48,7 +48,7 @@
             <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
                 <div class="row vh-100 p-5">
                     <div class="col align-self-center p-5 text-center">
-                        <img src="../../images/register.png" class="bounce" alt="">
+                        <img src="../../images/daftar.png" class="bounce" alt="">
                     </div>
                 </div>
             </div>

@@ -8,15 +8,15 @@
             </ol>
         </nav>                          
     </div>
-    <div class="box box-primary">
+    <div class="box-page">
 		<div class="box-header with-border">
 			<a href="?page=MyApp/add_buku" title="Tambah Data" class="btn btn-primary">
-				<i class="glyphicon glyphicon-plus"></i> Tambah Buku</a>
+			<i class="fa-solid fa-plus"></i> Tambah Buku</a>
 		</div>
 		<!-- /.box-header -->
 		<div class="box-body">
 			<div class="table-responsive">
-				<table id="example1" class="table table-bordered table-striped">
+				<table id="example1" class="table table-bordered table-striped table-light">
 					<thead>
 						<tr>
 							<th>No</th>
@@ -29,13 +29,11 @@
 						</tr>
 					</thead>
 					<tbody>
-
 						<?php
-                  $no = 1;
-                  $sql = $koneksi->query("SELECT * from tb_buku");
-                  while ($data= $sql->fetch_assoc()) {
-                ?>
-
+						$no = 1;
+							$sql = $koneksi->query("SELECT * from tb_buku");
+							while ($data= $sql->fetch_assoc()) {
+						?>
 						<tr>
 							<td>
 								<?php echo $no++; ?>
@@ -59,11 +57,11 @@
 							<td>
 								<a href="?page=MyApp/edit_buku&kode=<?php echo $data['id_buku']; ?>" title="Ubah"
 								 class="btn btn-success">
-									<i class="glyphicon glyphicon-edit"></i>
+								<i class="fa-solid fa-pen-to-square"></i>
 								</a>
 								<a href="?page=MyApp/del_buku&kode=<?php echo $data['id_buku']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
 								 title="Hapus" class="btn btn-danger">
-									<i class="glyphicon glyphicon-trash"></i>
+								<i class="fa-solid fa-trash"></i>
 							</td>
 						</tr>
 						<?php

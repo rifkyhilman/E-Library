@@ -60,6 +60,21 @@ h4 {
     background: #edf1f5;
 }
 
+.box-page {
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.box-header {
+    margin: 20px 0 20px 10px;
+}
+
+.navbar-main {
+    background-color: #212529;
+    padding: 12px 0 12px 0;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-between;
@@ -159,12 +174,12 @@ a.sidebar-link:hover {
 }
 
 .avatar{
-    width: 40px;
+    width: 33px;
     border-radius: 100%;
 }
 
 .profile-name {
-    font-size: 16px;
+    font-size: 0.8rem;
     white-space: nowrap;
     color: #fff;
     margin-left: 5px;
