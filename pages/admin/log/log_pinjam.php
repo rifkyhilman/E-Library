@@ -8,11 +8,10 @@
             </ol>
         </nav>                          
     </div>
-    <div class="box box-primary">
-		<!-- /.box-header -->
+    <div class="box-page">
 		<div class="box-body">
 			<div class="table-responsive">
-				<table id="example1" class="table table-bordered table-striped">
+				<table id="Table1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
 							<th>No</th>
@@ -22,15 +21,13 @@
 						</tr>
 					</thead>
 					<tbody>
-
 						<?php
-                  $no = 1;
-                  $sql = $koneksi->query("SELECT b.judul_buku, a.id_anggota, a.nama, l.tgl_pinjam
-                  from log_pinjam l inner join tb_buku b on l.id_buku=b.id_buku
-				  inner join tb_anggota a on l.id_anggota=a.id_anggota order by tgl_pinjam asc");
-                  while ($data= $sql->fetch_assoc()) {
-                ?>
-
+							$no = 1;
+							$sql = $koneksi->query("SELECT b.judul_buku, a.id_anggota, a.nama, l.tgl_pinjam
+							from log_pinjam l inner join tb_buku b on l.id_buku=b.id_buku
+							inner join tb_anggota a on l.id_anggota=a.id_anggota order by tgl_pinjam asc");
+							while ($data= $sql->fetch_assoc()) {
+						?>
 						<tr>
 							<td>
 								<?php echo $no++; ?>
@@ -48,10 +45,9 @@
 							</td>
 						</tr>
 						<?php
-                  }
-                ?>
+							}
+						?>
 					</tbody>
-
 				</table>
 			</div>
 		</div>
