@@ -10,12 +10,12 @@
     </div>
 	<div class="box-page">
 		<div class="box-header with-border">
-		<a href="?page=MyApp/print_laporan" title="Print" class="btn btn-success" stlye="color : green;">
-				<i class="fa-solid fa-print"></i> Print</a>
+		<a href="?page=print_lprsirkul" title="Print" class="btn btn-success" stlye="color : green;">
+			<i class="fa-solid fa-print"></i> Print</a>
 		</div>
 		<div class="box-body">
 			<div class="table-responsive">
-				<table class="table table-bordered table-striped">
+				<table id="T2" class="table table-bordered table-striped">
 					<thead>
 						<tr>
 							<th>No</th>
@@ -26,7 +26,6 @@
 							<th>Jatuh Tempo</th>
 							<th>Tgl dikembalikan</th>
 							<th>Denda</th>
-							
 						</tr>
 					</thead>
 				<tbody>

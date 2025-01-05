@@ -201,6 +201,9 @@
                                 case 'lapor_sirkul':
                                     include "pages/admin/sirkulasi/lapor_sirkul.php";
                                     break;
+                                case 'print_lprsirkul':
+                                    include "pages/admin/sirkulasi/print_lprsirkul.php";
+                                    break;
                                 case 'log_pinjam':
                                     include "pages/admin/log/log_pinjam.php";
                                     break;
@@ -250,14 +253,6 @@
                     "targets": "_all"
                 }]
             });
-        });
-        $("#T2").DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false
         });
 	</script>
 </body>
