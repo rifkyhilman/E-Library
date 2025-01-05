@@ -192,6 +192,12 @@
                                 case 'add_sirkul':
                                     include "pages/admin/sirkulasi/add_sirkul.php";
                                     break;
+                                case 'edit_sirkul':
+                                    include "pages/admin/sirkulasi/edit_sirkul.php";
+                                    break;
+                                case 'del_sirkul':
+                                    include "pages/admin/sirkulasi/del_sirkul.php";
+                                    break;
                                 case 'log_pinjam':
                                     include "pages/admin/log/log_pinjam.php";
                                     break;

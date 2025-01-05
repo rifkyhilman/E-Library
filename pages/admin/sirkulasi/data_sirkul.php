@@ -104,10 +104,10 @@
 							<?php } ?>
 
 							<td>
-								<a href="?page=panjang&kode=<?php echo $data['id_sk']; ?>" onclick="return confirm('Perpanjang Buku ?')" title="Perpanjang" class="btn btn-success">
+								<a href="?page=edit_sirkul&kode=<?php echo $data['id_sk']; ?>" onclick="return confirm('Perpanjang Buku ?')" title="Perpanjang" class="btn btn-success">
 									<i class="fa-solid fa-upload"></i>
 								</a>
-								<a href="?page=kembali&kode=<?php echo $data['id_sk']; ?>" onclick="return confirm('Kembalikan Buku Ini ?')" title="Kembalikan" class="btn btn-danger">
+								<a href="?page=del_sirkul&kode=<?php echo $data['id_sk']; ?>" onclick="return confirm('Kembalikan Buku Ini ?')" title="Kembalikan" class="btn btn-danger">
 									<i class="fa-solid fa-download"></i>
 							</td>
 							</tr>
