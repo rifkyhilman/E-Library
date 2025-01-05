@@ -189,6 +189,9 @@
                                 case 'data_sirkul':
                                     include "pages/admin/sirkulasi/data_sirkul.php";
                                     break;
+                                case 'add_sirkul':
+                                    include "pages/admin/sirkulasi/add_sirkul.php";
+                                    break;
                                 case 'log_pinjam':
                                     include "pages/admin/log/log_pinjam.php";
                                     break;

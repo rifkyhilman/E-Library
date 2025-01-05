@@ -8,15 +8,14 @@
             </ol>
         </nav>                          
     </div>
-    <div class="box box-primary">
+    <div class="box-page">
 		<div class="box-header with-border">
 			<a href="?page=add_sirkul" title="Tambah Data" class="btn btn-primary">
-				<i class="glyphicon glyphicon-plus"></i> Tambah Data</a>
+				<i class="fa-solid fa-plus"></i> Tambah Data</a>
 		</div>
-		<!-- /.box-header -->
 		<div class="box-body">
 			<div class="table-responsive">
-				<table id="example1" class="table table-bordered table-striped">
+				<table id="Table1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
 							<th>No</th>
@@ -105,11 +104,11 @@
 							<?php } ?>
 
 							<td>
-								<a href="?page=panjang&kode=<?php echo $data['id_sk']; ?>" onclick="return confirm('Perpanjang Data Ini ?')" title="Perpanjang" class="btn btn-success">
-									<i class="glyphicon glyphicon-upload"></i>
+								<a href="?page=panjang&kode=<?php echo $data['id_sk']; ?>" onclick="return confirm('Perpanjang Buku ?')" title="Perpanjang" class="btn btn-success">
+									<i class="fa-solid fa-upload"></i>
 								</a>
 								<a href="?page=kembali&kode=<?php echo $data['id_sk']; ?>" onclick="return confirm('Kembalikan Buku Ini ?')" title="Kembalikan" class="btn btn-danger">
-									<i class="glyphicon glyphicon-download"></i>
+									<i class="fa-solid fa-download"></i>
 							</td>
 							</tr>
 						<?php
@@ -120,10 +119,10 @@
 				</table>
 			</div>
 		</div>
+		<p> *Note
+			<br> Masa peminjaman buku adalah <span style="color:red; font-weight:bold;">7 hari</span> dari tanggal peminjaman.
+			<br> Jika buku dikembalikan lebih dari masa peminjaman, maka akan dikenakan <span style="color:red; font-weight:bold;">denda</span>
+			<br> sebesar <span style="color:red; font-weight:bold;">Rp 1.000/hari</span>.
+		</p>
 	</div>
-	<h4> *Note
-		<br> Masa peminjaman buku adalah <span style="color:red; font-weight:bold;">7 hari</span> dari tanggal peminjaman.
-		<br> Jika buku dikembalikan lebih dari masa peminjaman, maka akan dikenakan <span style="color:red; font-weight:bold;">denda</span>
-		<br> sebesar <span style="color:red; font-weight:bold;">Rp 1.000/hari</span>.
-	</h4>
 </section>

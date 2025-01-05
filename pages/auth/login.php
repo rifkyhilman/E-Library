@@ -89,6 +89,7 @@
 			$_SESSION["ses_username"]=$data_login["username"];
 			$_SESSION["ses_password"]=$data_login["password"];
 			$_SESSION["ses_level"]=$data_login["level"];
+			$_SESSION["ses_isLogin"]=true;
 
 			echo "<script>
 				Swal.fire({

@@ -34,7 +34,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="../../css/auth.css">
-    <title>Register Siswa</title>
+    <title>Daftar Anggota</title>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
             <div class="col-12 col-lg-6 col-xl-6 px-5">
                 <div class="row vh-100">
                     <div class="col align-self-center p-5 w-100">
-                        <h3 class="fw-bolder">DAFTAR SISWA</h3>
+                        <h3 class="fw-bolder">DAFTAR ANGGOTA</h3>
                         <p class="fw-lighter fs-6">Sudah Punya Akun ? <span id="signIn" role="button" class="text-primary"><a href="login.php" class="link_a">Login</a></span></p>
                         <!-- form register section -->
                         <form action="#" method="post" class="mt-5">
