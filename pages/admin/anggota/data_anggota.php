@@ -67,7 +67,7 @@
 									<i class="fa-solid fa-trash"></i>
 				 				 </a>
 
-								<a href="?page=MyApp/print_agt&kode=<?php echo $data['id_anggota'] ?>" title="print"
+								<a href="?page=print_anggota&kode=<?php echo $data['id_anggota'] ?>" title="print"
 								 target="_blank"><button class="btn btn-primary">
 								<i class="fa-solid fa-print"></i>
 				
