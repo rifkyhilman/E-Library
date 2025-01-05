@@ -3,22 +3,22 @@
         <h5>Data Anggota</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="/E-library/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Anggota</li>
             </ol>
         </nav>                          
     </div>
-    <div class="box box-primary">
+    <div class="box-page">
 		<div class="box-header with-border">
-			<a href="?page=MyApp/add_agt" title="Tambah Data" class="btn btn-primary">
-				<i class="glyphicon glyphicon-plus"></i> Tambah Data</a>
+			<a href="?page=add_anggota" title="Tambah Data" class="btn btn-primary">
+				<i class="fa-solid fa-plus"></i> Tambah Data</a>
 			<a href="?page=MyApp/print_allagt" title="Print" class="btn btn-success" stlye="color : green;">
-				<i class="glyphicon glyphicon-print"></i>Print</a>
+				<i class="fa-solid fa-print"></i> Print</a>
 		</div>
 		<!-- /.box-header -->
 		<div class="box-body">
 			<div class="table-responsive">
-				<table id="example1" class="table table-bordered table-striped">
+				<table id="Table1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
 							<th>No</th>
@@ -30,14 +30,12 @@
 							<th>Kelola</th>
 						</tr>
 					</thead>
-					<tbody>
-
-				<?php
-                  $no = 1;
-                  $sql = $koneksi->query("SELECT * from tb_anggota");
-                  while ($data= $sql->fetch_assoc()) {
-                ?>
-
+					<tbody class="table_content">
+						<?php
+							$no = 1;
+							$sql = $koneksi->query("SELECT * from tb_anggota");
+							while ($data= $sql->fetch_assoc()) {
+						?>
 						<tr>
 							<td>
 								<?php echo $no++; ?>
@@ -61,21 +59,18 @@
 							<td>
 								<a href="?page=MyApp/edit_agt&kode=<?php echo $data['id_anggota']; ?>" title="Ubah Data"
 								 class="btn btn-success">
-									<i class="glyphicon glyphicon-edit"></i>
+									<i class="fa-solid fa-pen-to-square"></i>
 								</a>
 
 								<a href="?page=MyApp/del_agt&kode=<?php echo $data['id_anggota']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
 								 title="Hapus" class="btn btn-danger">
-									<i class="glyphicon glyphicon-trash"></i>
+									<i class="fa-solid fa-trash"></i>
 				 				 </a>
 
 								<a href="?page=MyApp/print_agt&kode=<?php echo $data['id_anggota'] ?>" title="print"
 								 target="_blank"><button class="btn btn-primary">
-								<i class="fa fa-print"></i>
-				  				
-								
-
-								
+								<i class="fa-solid fa-print"></i>
+				
 							</td>
 						</tr>
 						<?php
