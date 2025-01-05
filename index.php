@@ -24,7 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="images/logo-smait.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css" />
@@ -115,7 +114,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="sidebar-header">
+                    <li class="sidebar-item">
+                        <a href="pages/auth/logout.php" class="sidebar-link" aria-expanded="false"> 
+                            <i class="fa-solid fa-power-off pe-2"></i>
+                            Logout
+                        </a>
+                    </li>
+                    <!-- Menu Admin  -->
+                    <!-- <li class="sidebar-header">
                         --- ADMIN MENU
                     </li>
                     <li class="sidebar-item">
@@ -123,27 +129,23 @@
                             <i class="fa-solid fa-user-plus pe-2"></i>
                             Pengguna Sistem
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </aside>
         <div class="main">
             <nav class="navbar navbar-expand px-3 border-bottom navbar-main">
                 <button class="btn" id="sidebar-toggle" type="button">
-                    <i class="fa-solid fa-bars" style="color: #ffff"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
+                <p id="Date_Time"></p>
                 <div class="navbar-collapse navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                <img src="images/profile.jpg" class="avatar" alt="">
-                                <span class="profile-name">
-        							<?php echo $data_nama; ?>
-                                </span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a href="pages/auth/logout.php" class="dropdown-item">Logout</a>
-                            </div>
+                            <img src="images/profile.jpg" class="avatar" alt="">
+                            <span class="profile-name">
+                                <?php echo $data_nama; ?>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -206,7 +208,6 @@
     </div>
     <script src="./js/script.js" type="module"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
@@ -219,14 +220,6 @@
                     "defaultContent": "-",
                     "targets": "_all"
                 }]
-            });
-            $('#example2').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false
             });
         });
 	</script>

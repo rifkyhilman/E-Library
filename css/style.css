@@ -73,6 +73,16 @@ h4 {
 .navbar-main {
     background-color: #212529;
     padding: 12px 0 12px 0;
+
+}
+
+.navbar-main i {
+    color: #fff;
+}
+
+.navbar-main p {
+    color: #fff;
+    margin: 0;
 }
 
 .nav-links {
@@ -91,6 +101,14 @@ h4 {
 
 .nav-links ol {
     padding-right: 30px;
+}
+
+
+
+/* Tabel */
+
+.table_content tr td {
+    text-align: center;
 }
 
 
