@@ -57,7 +57,7 @@
 							</td>
 
 							<td>
-								<a href="?page=MyApp/edit_agt&kode=<?php echo $data['id_anggota']; ?>" title="Ubah Data"
+								<a href="?page=edit_anggota&kode=<?php echo $data['id_anggota']; ?>" title="Ubah Data"
 								 class="btn btn-success">
 									<i class="fa-solid fa-pen-to-square"></i>
 								</a>
