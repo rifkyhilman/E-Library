@@ -6,13 +6,13 @@ sidebarToggle.addEventListener("click",function(){
 
 
 
-const arrBulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-const arrHari = ["Senin","Selasa","Rabu","Kamis","Juma'at","Sabtu","Minggu"];
 const date = new Date();
 const hari = date.getDay();
 const bulan = date.getMonth();
 const tahun = date.getFullYear();
 let tanggal = null;
+const arrBulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+const arrHari = ["Minggu","Senin","Selasa","Rabu","Kamis","Juma'at","Sabtu"];
 
 if(tanggal <= 10){
     tanggal = "0" + date.getDate();

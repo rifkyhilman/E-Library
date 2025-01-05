@@ -163,6 +163,9 @@
                                 case 'data_buku':
                                     include "pages/admin/buku/data_buku.php";
                                     break;
+                                case 'add_buku':
+                                    include "pages/admin/buku/add_buku.php";
+                                    break;
                                 case 'data_anggota':
                                     include "pages/admin/anggota/data_anggota.php";
                                     break;

@@ -10,7 +10,7 @@
     </div>
     <div class="box-page">
 		<div class="box-header with-border">
-			<a href="?page=MyApp/add_buku" title="Tambah Data" class="btn btn-primary">
+			<a href="?page=add_buku" title="Tambah Data" class="btn btn-primary">
 			<i class="fa-solid fa-plus"></i> Tambah Buku</a>
 		</div>
 		<!-- /.box-header -->
