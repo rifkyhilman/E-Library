@@ -103,7 +103,7 @@
                         </a>
                         <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-subs">
+                                <a href="?page=lapor_sirkul" class="sidebar-subs">
                                     <i class="fa-solid fa-file pe-2"></i>
                                     Laporan Sirkulasi
                                 </a>
@@ -198,6 +198,9 @@
                                 case 'del_sirkul':
                                     include "pages/admin/sirkulasi/del_sirkul.php";
                                     break;
+                                case 'lapor_sirkul':
+                                    include "pages/admin/sirkulasi/lapor_sirkul.php";
+                                    break;
                                 case 'log_pinjam':
                                     include "pages/admin/log/log_pinjam.php";
                                     break;
@@ -247,6 +250,14 @@
                     "targets": "_all"
                 }]
             });
+        });
+        $("#T2").DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
         });
 	</script>
 </body>
