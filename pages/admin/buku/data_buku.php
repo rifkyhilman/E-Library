@@ -16,7 +16,7 @@
 		<!-- /.box-header -->
 		<div class="box-body">
 			<div class="table-responsive">
-				<table id="example1" class="table table-bordered table-striped">
+				<table id="Table1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
 							<th>No</th>
@@ -55,11 +55,11 @@
 							</td>
 
 							<td>
-								<a href="?page=MyApp/edit_buku&kode=<?php echo $data['id_buku']; ?>" title="Ubah"
+								<a href="?page=edit_buku&kode=<?php echo $data['id_buku']; ?>" title="Ubah"
 								 class="btn btn-success">
 								<i class="fa-solid fa-pen-to-square"></i>
 								</a>
-								<a href="?page=MyApp/del_buku&kode=<?php echo $data['id_buku']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
+								<a href="?page=del_buku&kode=<?php echo $data['id_buku']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
 								 title="Hapus" class="btn btn-danger">
 								<i class="fa-solid fa-trash"></i>
 							</td>

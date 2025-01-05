@@ -77,26 +77,35 @@ if (strlen($tambah) == 1){
             '".$_POST['pengarang']."',
             '".$_POST['penerbit']."',
             '".$_POST['th_terbit']."')";
+            
         $query_simpan = mysqli_query($koneksi, $sql_simpan);
         mysqli_close($koneksi);
 
-    if ($query_simpan){
-        echo "<script>
-        Swal.fire({title: 'Tambah Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
-        }).then((result) => {
-            if (result.value) {
-                window.location = '?page=data_buku';
-            }
-        })</script>";
-    }else {
-        echo "<script>
-        Swal.fire({title: 'Tambah Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
-        }).then((result) => {
-            if (result.value) {
-                window.location = '?page=add_buku';
-            }
-        })</script>";
-    }
+        if ($query_simpan){
+            echo "<script>
+            Swal.fire({
+                title: 'Tambah Data Buku Berhasil',
+                text: '',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = '?page=data_buku';
+                }
+            })</script>";
+        }else {
+            echo "<script>
+            Swal.fire({
+                title: 'Tambah Data Buku Gagal',
+                text: '',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = '?page=add_buku';
+                }
+            })</script>";
+        }
   }
     
 ?>
