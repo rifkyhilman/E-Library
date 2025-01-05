@@ -62,7 +62,7 @@
 									<i class="fa-solid fa-pen-to-square"></i>
 								</a>
 
-								<a href="?page=MyApp/del_agt&kode=<?php echo $data['id_anggota']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
+								<a href="?page=del_anggota&kode=<?php echo $data['id_anggota']; ?>" onclick="return confirm('Yakin Hapus Data Ini ?')"
 								 title="Hapus" class="btn btn-danger">
 									<i class="fa-solid fa-trash"></i>
 				 				 </a>

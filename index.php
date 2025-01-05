@@ -177,6 +177,9 @@
                                 case 'edit_anggota':
                                     include "pages/admin/anggota/edit_anggota.php";
                                     break;
+                                case 'del_anggota':
+                                    include "pages/admin/anggota/del_anggota.php";
+                                    break;
                                 case 'data_sirkul':
                                     include "pages/admin/sirkulasi/data_sirkul.php";
                                     break;
