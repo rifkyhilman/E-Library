@@ -12,7 +12,7 @@
 		<div class="box-header with-border">
 			<a href="?page=add_anggota" title="Tambah Data" class="btn btn-primary">
 				<i class="fa-solid fa-plus"></i> Tambah Data</a>
-			<a href="?page=MyApp/print_allagt" title="Print" class="btn btn-success" stlye="color : green;">
+			<a href="?page=printall_anggota" title="Print" class="btn btn-success" stlye="color : green;">
 				<i class="fa-solid fa-print"></i> Print</a>
 		</div>
 		<!-- /.box-header -->

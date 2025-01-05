@@ -183,6 +183,9 @@
                                 case 'print_anggota':
                                     include "pages/admin/anggota/print_anggota.php";
                                     break;
+                                case 'printall_anggota':
+                                    include "pages/admin/anggota/printall_anggota.php";
+                                    break;
                                 case 'data_sirkul':
                                     include "pages/admin/sirkulasi/data_sirkul.php";
                                     break;
