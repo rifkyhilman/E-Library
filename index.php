@@ -217,9 +217,9 @@
                             }
                         } else {
                             // Auto Halaman Home Pengguna
-                            if ($data_level == "Administrator") {
+                            if ($data_level == "Admin") {
                                 include "pages/admin/dashboard.php";
-                            } elseif ($data_level == "Petugas") {
+                            } elseif ($data_level == "Anggota") {
                                 include "home/petugas.php";
                             } 
                         }

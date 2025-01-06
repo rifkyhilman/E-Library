@@ -39,7 +39,7 @@ body {
         margin-top: 5%;
     }
     .ball.register {
-        margin-left: 14%;
+        margin-left: 10%;
         margin-top: 6%;
     }
     .bounce {
@@ -115,6 +115,14 @@ body {
     text-decoration: none;
 }
 
-.bounce {
-    height: 330px;
+.bounce{
+    height: 300px;
+}
+
+.img-signup {
+    margin: 50px 0 0 -50px;
+}
+
+.img-sigin {
+    margin: 50px 0 0 -50px
 }
