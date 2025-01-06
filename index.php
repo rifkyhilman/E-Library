@@ -137,6 +137,12 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
+                        <a href="?page=katalog_buku" class="sidebar-link">
+                            <i class="fa-solid fa-book pe-2"></i>
+                            Katalog Buku
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
                         <a href="?page=profile&kode=<?php echo $data_agt[0] ?>" class="sidebar-link">
                             <i class="fa-solid fa-user pe-2"></i>
                             Data Pribadi
@@ -206,6 +212,9 @@
                                     break;
                                 case 'profile':
                                     include "pages/user/profile.php";
+                                    break;
+                                case 'katalog_buku':
+                                    include "pages/user/katalog_buku.php";
                                     break;
                                 case 'data_buku':
                                     include "pages/admin/buku/data_buku.php";
