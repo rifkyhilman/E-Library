@@ -60,6 +60,10 @@ h4 {
     background: #edf1f5;
 }
 
+.box-profile {
+    display: flex;
+}
+
 .box-page {
     padding: 40px;
     margin-bottom: 20px;
@@ -70,10 +74,14 @@ h4 {
     margin: 20px 0 20px 0;
 }
 
+.form-img {
+    margin-bottom: 50px;
+}
+
 .navbar-main {
     background-color: #212529;
-    padding: 12px 0 12px 0;
-
+    padding: 10px 0 10px 0;
+    height: 74px;
 }
 
 .navbar-main i {
@@ -196,6 +204,40 @@ a.sidebar-link:hover {
 .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
     transform: rotate(45deg);
     transition: all .2s ease-out;
+}
+
+.upload{
+    width: 125px;
+    position: relative;
+    margin: auto;
+}
+  
+.upload img{
+    border-radius: 50%;
+    border: 8px solid #DCDCDC;
+}
+  
+.upload .round{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #0d6efd;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.upload .round input[type = "file"]{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+  
+input[type=file]::-webkit-file-upload-button{
+    cursor: pointer;
 }
 
 .avatar{

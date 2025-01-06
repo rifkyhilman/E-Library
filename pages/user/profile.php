@@ -15,22 +15,28 @@
             </ol>
         </nav>                          
     </div>
-    <div class="box-page">
+    <div class="box-page">        
+        <form action="" class="form-img" id="form" method="post" enctype="multipart/form-data">
+            <div class="upload">
+                <img src="images/profile/<?php echo $data_cek[5] ?>" width = 125 height = 125 alt="">
+                <div class="round">
+                    <input type="file" name="uploaded_file" id="image" accept=".jpg, .jpeg, .png">
+                    <i class = "fa-solid fa-camera" style = "color: #fff;"></i>
+                </div>
+            </div>
+        </form>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="box-body">
-
                 <div class="form-group">
                     <label>Id anggota</label>
                     <input type='text' class="form-control inpt" name="id_anggota" value="<?php echo $data_cek['id_anggota']; ?>"
                         readonly/>
                 </div>
-
                 <div class="form-group">
                     <label>Nama</label>
                     <input type='text' class="form-control inpt" name="nama" value="<?php echo $data_cek['nama']; ?>"
                     />
                 </div>
-
                 <div class="form-group">
                     <label>Jenis Kelamin</label>
                     <select name="jekel" id="jekel" class="form-control inpt" required>
@@ -45,39 +51,36 @@
                     ?>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label>Kelas</label>
                     <input type='text' class="form-control inpt" name="kelas" value="<?php echo $data_cek['kelas']; ?>"
                     />
                 </div>
-
                 <div class="form-group">
                     <label>No HP</label>
                     <input type='number' class="form-control inpt" name="no_hp" value="<?php echo $data_cek['no_hp']; ?>"
                     />
                 </div>
-
             </div>
             <div class="box-footer btn-box">
                 <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
                 <a href="/E-Library" class="btn btn-warning">Batal</a>
             </div>
         </form>
-    </div>
+    </div> 
 </section>
 
 
 <?php
 
 if (isset ($_POST['Ubah'])){
-    //mulai proses ubah
     $sql_ubah = "UPDATE tb_anggota SET
 		nama='".$_POST['nama']."',
 		jekel='".$_POST['jekel']."',
 		kelas='".$_POST['kelas']."',
         no_hp='".$_POST['no_hp']."'
         WHERE id_anggota='".$_POST['id_anggota']."'";
+
     $query_ubah = mysqli_query($koneksi, $sql_ubah);
 
     if ($query_ubah) {
@@ -96,6 +99,45 @@ if (isset ($_POST['Ubah'])){
         echo "<script>
         Swal.fire({
             title: 'Ubah Data Diri Gagal',
+            text: '',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.value) {
+                window.location = '?page=profile';
+            }
+        })</script>";
+    }
+}
+
+if (isset($_FILES["uploaded_file"]["name"])){ 
+
+    $sql_ubah = "UPDATE tb_anggota SET foto_profile='".$_FILES["uploaded_file"]["name"]."' WHERE id_anggota='".$_GET['kode']."'";
+
+    $filename = $_FILES["uploaded_file"]["name"];
+    $tempname = $_FILES["uploaded_file"]["tmp_name"];
+    $folder = "images/profile/".$filename;
+    move_uploaded_file($tempname, $folder);
+
+    $query_ubah = mysqli_query($koneksi, $sql_ubah);
+
+
+    if ($query_ubah) {
+        echo "<script>
+        Swal.fire({
+            title: 'Ubah Foto Profile Berhasil',
+            text: '',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.value) {
+                window.location = '/E-Library';
+            }
+        })</script>";
+    }else{
+        echo "<script>
+        Swal.fire({
+            title: 'Ubah Foto Gagal',
             text: '',
             icon: 'error',
             confirmButtonText: 'OK'

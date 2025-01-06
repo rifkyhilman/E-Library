@@ -10,7 +10,7 @@
         $data_user = $_SESSION["ses_username"];
         $data_level = $_SESSION["ses_level"];
 
-		$sql_getAgt = "SELECT id_anggota FROM tb_anggota WHERE BINARY nama='$data_nama'";
+		$sql_getAgt = "SELECT id_anggota, foto_profile FROM tb_anggota WHERE BINARY nama='$data_nama'";
 		$query_getAgt = mysqli_query($koneksi, $sql_getAgt);
 		$data_agt = mysqli_fetch_array($query_getAgt,MYSQLI_BOTH);
     }
@@ -173,7 +173,17 @@
                 <div class="navbar-collapse navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <img src="images/profile.jpg" class="avatar" alt="">
+                            <?php 
+                                if($data_level === "Anggota"&& $data_agt[1] !== null){
+                            ?>
+                                <img src="images/profile/<?php echo $data_agt[1] ?>" class="avatar" alt="">
+                            <?php
+                                } else  { 
+                            ?>
+                                <img src="images/profile.png" class="avatar" alt="">
+                            <?php 
+                                };
+                            ?>
                             <span class="profile-name">
                                 <?php echo $data_nama; ?>
                             </span>
@@ -295,6 +305,11 @@
             });
         });
 	</script>
+    <script type="text/javascript">
+      document.getElementById("image").onchange = function(){
+          document.getElementById("form").submit();
+      };
+    </script>
 </body>
 
 </html>
