@@ -18,7 +18,17 @@
     <div class="box-page">        
         <form action="" class="form-img" id="form" method="post" enctype="multipart/form-data">
             <div class="upload">
-                <img src="images/profile/<?php echo $data_cek[5] ?>" width = 125 height = 125 alt="">
+                    <?php 
+                        if($data_cek[5] !== ""){
+                    ?>
+                        <img src="images/profile/<?php echo $data_cek[5] ?>" width=125 height=125 alt="foto_profile">
+                    <?php
+                        } else  { 
+                    ?>
+                        <img src="images/profile.png" width=125 height=125 alt="foto_profile">
+                    <?php 
+                        };
+                    ?>
                 <div class="round">
                     <input type="file" name="uploaded_file" id="image" accept=".jpg, .jpeg, .png">
                     <i class = "fa-solid fa-camera" style = "color: #fff;"></i>

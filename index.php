@@ -174,7 +174,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <?php 
-                                if($data_level === "Anggota"&& $data_agt[1] !== null){
+                                if($data_level === "Anggota"&& $data_agt[1] !== ""){
                             ?>
                                 <img src="images/profile/<?php echo $data_agt[1] ?>" class="avatar" alt="">
                             <?php
