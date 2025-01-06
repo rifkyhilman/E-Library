@@ -1,6 +1,7 @@
 <?php
     include "db/conn.php";
     session_start();
+
     if (isset($_SESSION["ses_username"]) == "") {
         header("location: pages/auth/login.php");
     } else {
@@ -8,6 +9,10 @@
         $data_nama = $_SESSION["ses_nama"];
         $data_user = $_SESSION["ses_username"];
         $data_level = $_SESSION["ses_level"];
+
+		$sql_getAgt = "SELECT id_anggota FROM tb_anggota WHERE BINARY nama='$data_nama'";
+		$query_getAgt = mysqli_query($koneksi, $sql_getAgt);
+		$data_agt = mysqli_fetch_array($query_getAgt,MYSQLI_BOTH);
     }
 
 ?>
@@ -41,6 +46,9 @@
                     </a>
                 </div>
                 <ul class="sidebar-nav"> 
+                    <?php
+                        if ($data_level === "Admin") {
+                    ?>
                     <li class="sidebar-header">
                         --- MENU ADMIN
                     </li>
@@ -116,6 +124,33 @@
                             Logout
                         </a>
                     </li>
+                    <?php 
+                        } else {
+                    ?>
+                    <li class="sidebar-header">
+                        --- MENU ANGGOTA
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="/E-Library" class="sidebar-link">
+                            <i class="fa-solid fa-gauge pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="?page=profile&kode=<?php echo $data_agt[0] ?>" class="sidebar-link">
+                            <i class="fa-solid fa-user pe-2"></i>
+                            Data Pribadi
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="pages/auth/logout.php" class="sidebar-link" aria-expanded="false"> 
+                            <i class="fa-solid fa-power-off pe-2"></i>
+                            Logout
+                        </a>
+                    </li>
+                    <?php
+                        }
+                    ?>
                     <!-- Menu Admin  -->
                     <!-- <li class="sidebar-header">
                         --- ADMIN MENU
@@ -155,6 +190,12 @@
                             switch ($hal) {
                                 case 'admin':
                                     include "pages/admin/dashboard.php";
+                                    break;
+                                case 'user':
+                                    include "pages/user/dashboard.php";
+                                    break;
+                                case 'profile':
+                                    include "pages/user/profile.php";
                                     break;
                                 case 'data_buku':
                                     include "pages/admin/buku/data_buku.php";
@@ -216,11 +257,10 @@
                                     break;
                             }
                         } else {
-                            // Auto Halaman Home Pengguna
                             if ($data_level == "Admin") {
                                 include "pages/admin/dashboard.php";
                             } elseif ($data_level == "Anggota") {
-                                include "home/petugas.php";
+                                include "pages/user/dashboard.php";
                             } 
                         }
 				    ?>
