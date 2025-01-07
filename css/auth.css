@@ -28,12 +28,11 @@ body {
         overflow-y: hidden;
     }
     /* add circle blue background */
-    /* .ball {
+    .ball {
         overflow: hidden;
         transition: margin 1s;
         width: 600px;
         height: 600px;
-        background-color: #7f67a5;
     }
     .ball.login {
         margin-left: 50%;
@@ -42,8 +41,7 @@ body {
     .ball.register {
         margin-left: 10%;
         margin-top: 6%;
-        background-color: #7f67a5;
-    } */
+    }
     .bounce {
         animation: bounce 2s infinite alternate;
         -webkit-animation: bounce 2s infinite alternate;
@@ -118,13 +116,13 @@ body {
 }
 
 .bounce{
-    height: 300px;
+    height: 350px;
 }
 
 .img-signup {
-    margin: 50px 0 0 -50px;
+    margin: -10px 0 0 -32px;
 }
 
 .img-sigin {
-    margin: 50px 0 0 -50px
+    margin: -10px 0 0 -43px
 }

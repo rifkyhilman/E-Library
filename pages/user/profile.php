@@ -19,7 +19,7 @@
         <form action="" class="form-img" id="form" method="post" enctype="multipart/form-data">
             <div class="upload">
                     <?php 
-                        if($data_cek[5] !== ""){
+                        if($data_cek[6] !== ""){
                     ?>
                         <img src="images/profile/<?php echo $data_cek[5] ?>" width=125 height=125 alt="foto_profile">
                     <?php

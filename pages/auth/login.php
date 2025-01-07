@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../images/logo-smait.png">
+    <link rel="icon" href="../../images/anugrah-abadi.png">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -18,11 +18,6 @@
 </head>
 
 <body>
-
-    <!-- blue circle background -->
-    <!-- <div class="d-none d-md-block ball login bg-primary bg-gradient position-absolute rounded-circle"></div> -->
-
-    <!-- Login Section -->
     <section class="container login__form active">
         <div class="row vh-100 w-100 align-self-center">
             <div class="col-12 col-lg-6 col-xl-6 px-5">
