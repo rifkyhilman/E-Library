@@ -37,6 +37,11 @@ $kode_unik= strlen($tambah);
                 </div>
 
                 <div class="form-group">
+                    <label>NIS</label>
+                    <input type="number" name="nis" id="nis" class="form-control inpt" placeholder="Nomor Induk Siswa">
+                </div>
+
+                <div class="form-group">
                     <label>Nama Anggota</label>
                     <input type="text" name="nama" id="nama" class="form-control inpt" placeholder="Nama Anggota">
                 </div>
@@ -62,19 +67,21 @@ $kode_unik= strlen($tambah);
 
             </div>
             <div class="box-footer btn-box">
-                <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-                <a href="?page=data_anggota" class="btn btn-warning">Batal</a>
+                <div>
+                    <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
+                    <a href="?page=data_anggota" class="btn btn-warning">Batal</a>
+                </div>
             </div>
         </form>
     </div>
 </section>
 
-
 <?php
     if (isset ($_POST['Simpan'])){
     
-        $sql_simpan = "INSERT INTO tb_anggota (id_anggota,nama,jekel,kelas,no_hp) VALUES (
+        $sql_simpan = "INSERT INTO tb_anggota (id_anggota,nis,nama,jekel,kelas,no_hp) VALUES (
             '".$_POST['id_anggota']."',
+            '".$_POST['nis']."',
             '".$_POST['nama']."',
             '".$_POST['jekel']."',
             '".$_POST['kelas']."',

@@ -43,6 +43,11 @@
                         readonly/>
                 </div>
                 <div class="form-group">
+                    <label>NIS</label>
+                    <input type='number' class="form-control inpt" name="nis" value="<?php echo $data_cek['nis']; ?>"
+                    />
+                </div>
+                <div class="form-group">
                     <label>Nama</label>
                     <input type='text' class="form-control inpt" name="nama" value="<?php echo $data_cek['nama']; ?>"
                     />
@@ -92,6 +97,7 @@
 
 if (isset ($_POST['Ubah'])){
     $sql_ubah = "UPDATE tb_anggota SET
+		nis='".$_POST['nis']."',
 		nama='".$_POST['nama']."',
 		jekel='".$_POST['jekel']."',
 		kelas='".$_POST['kelas']."',

@@ -23,6 +23,7 @@
 						<tr>
 							<th>No</th>
 							<th>Id Anggota</th>
+							<th>NIS</th>
 							<th>Nama</th>
 							<th>JK</th>
 							<th>Kelas</th>
@@ -42,6 +43,9 @@
 							</td>
 							<td>
 								<?php echo $data['id_anggota']; ?>
+							</td>
+							<td>
+								<?php echo $data['nis']; ?>
 							</td>
 							<td>
 								<?php echo $data['nama']; ?>

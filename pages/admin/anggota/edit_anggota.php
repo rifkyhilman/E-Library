@@ -27,6 +27,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label>NIS</label>
+                    <input type='number' class="form-control inpt" name="nis" value="<?php echo $data_cek['nis']; ?>"
+                    />
+                </div>
+
+                <div class="form-group">
                     <label>Nama</label>
                     <input type='text' class="form-control inpt" name="nama" value="<?php echo $data_cek['nama']; ?>"
                     />
@@ -61,8 +67,10 @@
 
             </div>
             <div class="box-footer btn-box">
-                <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
-                <a href="?page=data_anggota" class="btn btn-warning">Batal</a>
+                <div>
+                    <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
+                    <a href="?page=data_anggota" class="btn btn-warning">Batal</a>
+                </div>
             </div>
         </form>
     </div>
@@ -74,6 +82,7 @@
 if (isset ($_POST['Ubah'])){
     //mulai proses ubah
     $sql_ubah = "UPDATE tb_anggota SET
+    	nis='".$_POST['nis']."',
 		nama='".$_POST['nama']."',
 		jekel='".$_POST['jekel']."',
 		kelas='".$_POST['kelas']."',
