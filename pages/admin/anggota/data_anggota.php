@@ -67,9 +67,9 @@
 									<i class="fa-solid fa-trash"></i>
 				 				 </a>
 
-								<a href="?page=print_anggota&kode=<?php echo $data['id_anggota'] ?>" title="print"
-								 target="_blank"><button class="btn btn-primary">
-								<i class="fa-solid fa-print"></i>
+								<a href="?page=print_anggota&kode=<?php echo $data['id_anggota'] ?>" title="print" 	 class="btn btn-primary">
+									<i class="fa-solid fa-print"></i>
+								</a>
 				
 							</td>
 						</tr>

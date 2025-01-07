@@ -73,8 +73,15 @@
                 </div>
             </div>
             <div class="box-footer btn-box">
-                <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
-                <a href="/E-Library" class="btn btn-warning">Batal</a>
+                <div>
+                    <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
+                    <a href="/E-Library" class="btn btn-warning">Batal</a>
+                </div>
+                <div>
+                    <a href="?page=print_anggota&kode=<?php echo $data_cek['id_anggota'] ?>" title="print" 	 class="btn btn-primary">
+                       Cetak Kartu Anggota
+                    </a>
+                </div>
             </div>
         </form>
     </div> 

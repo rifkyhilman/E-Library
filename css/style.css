@@ -120,6 +120,8 @@ h4 {
 }
 
 .btn-box {
+    display: flex;
+    justify-content: space-between;
     margin: 30px 0 30px 0;
 }
 

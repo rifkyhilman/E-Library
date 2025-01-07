@@ -10,7 +10,7 @@
     </div>
 	<div class="box-page">
 		<div class="box-header with-border">
-		<a href="?page=print_lprsirkul" title="Print" class="btn btn-success" stlye="color : green;">
+		    <a href="?page=print_lprsirkul" title="Print" class="btn btn-success" stlye="color : green;">
 			<i class="fa-solid fa-print"></i> Print</a>
 		</div>
 		<div class="box-body">
