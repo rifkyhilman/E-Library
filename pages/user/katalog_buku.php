@@ -16,23 +16,30 @@
             <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Cari Judul Buku...">
         </div>
         <datalist id="datalistOptions">
-            <option value="San Francisco">
-            <option value="New York">
-            <option value="Seattle">
-            <option value="Los Angeles">
-            <option value="Chicago">
+            <?php
+                $sql = $koneksi->query("SELECT * from tb_buku");
+                while ($data= $sql->fetch_assoc()) {
+            ?>
+                <option value="<?php echo $data['judul_buku']; ?>">
+            <?php 
+                }
+            ?>
         </datalist>
     </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
+        <?php
+            $sql = $koneksi->query("SELECT * from tb_buku");
+            while ($data= $sql->fetch_assoc()) {
+        ?>
         <div class="col">
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="https://static.buku.kemdikbud.go.id/content/thumbnail/Cover_Kelas_XII_PJOK_BS.png" class="img-fluid rounded-start" alt="...">
+                        <img src="images/buku/<?php echo $data['gambar']; ?>" class="img-fluid rounded-start" alt="Sampul Buku">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title"><?php echo $data['judul_buku']; ?></h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                         </div>
@@ -40,53 +47,8 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://cdn.gramedia.com/uploads/items/9786022989417_SMA-MA-Kelas-.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://ebooks.gramedia.com/ebook-covers/32845/big_covers/ID_EMK2016MTH05ESWP_B.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHaTZGipwRlly0osGQFH_xa5c5vwSspLHyVw&s" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+            }
+        ?>
     </div>
 </section>
