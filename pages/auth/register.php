@@ -40,7 +40,7 @@
 <body>
 
     <!-- blue circle background -->
-    <div class="d-none d-md-block ball register bg-primary bg-gradient position-absolute rounded-circle"></div>
+    <!-- <div class="d-none d-md-block ball register bg-primary bg-gradient position-absolute rounded-circle"></div> -->
 
     <!-- Register Section -->
     <section class="container register__form active">
@@ -48,7 +48,7 @@
             <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
                 <div class="row vh-100 p-5">
                     <div class="col align-self-center p-5 text-center">
-                        <img src="../../images/register.png" class="bounce img-signup" alt="">
+                        <img src="../../images/anugrah-abadi.png" class="bounce img-signup" alt="">
                     </div>
                 </div>
             </div>

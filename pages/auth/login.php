@@ -20,7 +20,7 @@
 <body>
 
     <!-- blue circle background -->
-    <div class="d-none d-md-block ball login bg-primary bg-gradient position-absolute rounded-circle"></div>
+    <!-- <div class="d-none d-md-block ball login bg-primary bg-gradient position-absolute rounded-circle"></div> -->
 
     <!-- Login Section -->
     <section class="container login__form active">
@@ -28,7 +28,7 @@
             <div class="col-12 col-lg-6 col-xl-6 px-5">
                 <div class="row vh-100">
                     <div class="col align-self-center p-5 w-100">
-                        <h3 class="fw-bolder">LOGIN SISWA</h3>
+                        <h3 class="fw-bolder">LOGIN</h3>
                         <p class="fw-lighter fs-6">Belum Punya Akun ? <span id="signUp" role="button" class="text-primary"><a href="register.php" class="link_a">Daftar</a></span></p>
                         <!-- form login section -->
                         <form action="#" method="POST" class="mt-5">
@@ -53,7 +53,7 @@
             <div class="d-none d-lg-block col-lg-6 col-xl-6 p-5">
                 <div class="row vh-100 p-5">
                     <div class="col align-self-center p-5 text-center">
-                        <img src="../../images/login.png" class="bounce img-sigin" alt="logo sekolah">
+                        <img src="../../images/anugrah-abadi.png" class="bounce img-sigin" alt="logo sekolah">
                     </div>
                 </div>
             </div>
