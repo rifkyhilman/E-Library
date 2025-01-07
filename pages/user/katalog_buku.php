@@ -29,16 +29,18 @@
 
                 if(mysqli_num_rows($query_run) > 0){
                     foreach($query_run as $data_buku){?>
-                        <div class="card"  style="max-width: 600px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="images/buku/<?php echo $data_buku['gambar']; ?>" class="img-fluid rounded-start" alt="Sampul Buku">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><?php echo $data_buku['judul_buku']; ?></h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        <div class="col">
+                            <div class="card">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="images/buku/<?php echo $data_buku['gambar']; ?>" class="img-fluid rounded-start" alt="Sampul Buku">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?php echo $data_buku['judul_buku']; ?></h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

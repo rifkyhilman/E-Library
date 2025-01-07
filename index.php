@@ -25,7 +25,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="icon" href="images/logo-smait.png">
+    <link rel="icon" href="images/anugrah-abadi.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
@@ -41,7 +41,7 @@
             <div class="h-100">
                 <div class="sidebar-logo">
                     <a href="index.php">
-                        <img src="images/logo-smait.png" class="logo-img" alt="">
+                        <img src="images/anugrah-abadi.png" class="logo-img" alt="">
                         <span>E-Library</span>
                     </a>
                 </div>
@@ -143,6 +143,12 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
+                        <a href="?page=riwayat_pjm" class="sidebar-link">
+                            <i class="fa-solid fa-timeline pe-2"></i>
+                            Riwayat Pinjam
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
                         <a href="?page=profile&kode=<?php echo $data_agt[0] ?>" class="sidebar-link">
                             <i class="fa-solid fa-user pe-2"></i>
                             Data Pribadi
@@ -215,6 +221,9 @@
                                     break;
                                 case 'katalog_buku':
                                     include "pages/user/katalog_buku.php";
+                                    break;
+                                case 'riwayat_pjm':
+                                    include "pages/user/riwayat_pinjam.php";
                                     break;
                                 case 'data_buku':
                                     include "pages/admin/buku/data_buku.php";
