@@ -44,7 +44,10 @@
                     <label>Th Terbit</label>
                     <input class="form-control" name="th_terbit" value="<?php echo $data_cek['th_terbit']; ?>">
                 </div>
-
+                <div class="form-group inpt">
+                    <label>Sampul Buku</label>
+                    <input type="file" class="form-control" id="inputGroupFile04" name="uploaded_file" accept=".jpg, .jpeg, .png" required>
+                </div>
             </div>
             <div class="box-footer btn-box">
                 <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
@@ -61,10 +64,15 @@ if (isset ($_POST['Ubah'])){
     //mulai proses ubah
     $sql_ubah = "UPDATE tb_buku SET
         judul_buku='".$_POST['judul_buku']."',
+        gambar='".$_FILES["uploaded_file"]["name"]."',
         pengarang='".$_POST['pengarang']."',
         penerbit='".$_POST['penerbit']."',
         th_terbit='".$_POST['th_terbit']."'
         WHERE id_buku='".$_POST['id_buku']."'";
+    $filename = $_FILES["uploaded_file"]["name"];
+    $tempname = $_FILES["uploaded_file"]["tmp_name"];
+    $folder = "images/buku/".$filename;
+    move_uploaded_file($tempname, $folder);
         
     $query_ubah = mysqli_query($koneksi, $sql_ubah);
 

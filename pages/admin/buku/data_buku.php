@@ -30,7 +30,7 @@
 					</thead>
 					<tbody class="table_content">
 						<?php
-						$no = 1;
+							$no = 1;
 							$sql = $koneksi->query("SELECT * from tb_buku");
 							while ($data= $sql->fetch_assoc()) {
 						?>

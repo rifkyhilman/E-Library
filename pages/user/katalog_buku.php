@@ -76,7 +76,7 @@
             <div class="card">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHaTZGipwRlly0osGQFH_xa5c5vwSspLHyVw&s" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

@@ -33,7 +33,7 @@ if (strlen($tambah) == 1){
                 <div class="form-group inpt">
                     <label>ID Buku</label>
                     <input type="text" name="id_buku" id="id_buku" class="form-control" value="<?php echo $format; ?>"
-                        readonly/>
+                    readonly/>
                 </div>
                 <div class="form-group inpt">
                     <label>Judul Buku</label>
@@ -55,6 +55,11 @@ if (strlen($tambah) == 1){
                     <input type="number" name="th_terbit" id="th_terbit" class="form-control" placeholder="Tahun Terbit" required>
                 </div>
 
+                <div class="form-group inpt">
+                    <label>Sampul Buku</label>
+                    <input type="file" class="form-control" id="inputGroupFile04" name="uploaded_file" accept=".jpg, .jpeg, .png" required>
+                </div>
+
             </div>
             
             <!-- /.box-body -->
@@ -71,12 +76,18 @@ if (strlen($tambah) == 1){
 
     if (isset ($_POST['Simpan'])){
     
-        $sql_simpan = "INSERT INTO tb_buku (id_buku,judul_buku,pengarang,penerbit,th_terbit) VALUES (
+        $sql_simpan = "INSERT INTO tb_buku (id_buku,judul_buku,gambar,pengarang,penerbit,th_terbit) VALUES (
             '".$_POST['id_buku']."',
             '".$_POST['judul_buku']."',
+            '".$_FILES["uploaded_file"]["name"]."',
             '".$_POST['pengarang']."',
             '".$_POST['penerbit']."',
             '".$_POST['th_terbit']."')";
+
+        $filename = $_FILES["uploaded_file"]["name"];
+        $tempname = $_FILES["uploaded_file"]["tmp_name"];
+        $folder = "images/buku/".$filename;
+        move_uploaded_file($tempname, $folder);
             
         $query_simpan = mysqli_query($koneksi, $sql_simpan);
         mysqli_close($koneksi);
