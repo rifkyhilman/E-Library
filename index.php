@@ -319,7 +319,21 @@
                 columnDefs: [{
                     "defaultContent": "-",
                     "targets": "_all"
-                }]
+                }],
+                language: {
+                    info: 'Halaman _PAGE_ dari _PAGES_',
+                    infoEmpty: 'Halaman _PAGE_ dari _PAGES_',
+                    emptyTable: 'Tidak ada Data',
+                    lengthMenu: '_MENU_',
+                    search: 'Filter:    ',
+                    zeroRecords: 'Data tidak ada'
+                },
+                layout: {
+                    topStart: 'pageLength',
+                    topEnd: 'search',
+                    bottomStart: 'info',
+                    bottomEnd: 'paging'
+                }
             });
         });
 	</script>

@@ -3,10 +3,9 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="assets_style/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets_style/assets/bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet"
-        href="assets_style/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
     <title>Laporan Perpustakaan - Laporan Sirkulasi</title>
 </head>
 
@@ -14,11 +13,11 @@
     <h3 class='text-center' style='font-family: Quicksand, sans-serif; margin-top: 30px;'>
         .:: Laporan Perpustakaan ::.
     </h3>
+    <br></br>
     <h4 class='text-center'>Laporan Sirkulasi</h4>
     <?php
         include "db/conn.php";
     
-
         $sql=mysqli_query($koneksi,"SELECT tb_sirkulasi.id_buku, 
         tb_buku.judul_buku, 
         tb_anggota.id_anggota,

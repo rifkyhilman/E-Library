@@ -3,7 +3,7 @@
         <h5>Riwayat Peminjaman Buku</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="/E-Library">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Log Pinjam</li>
             </ol>
         </nav>                          

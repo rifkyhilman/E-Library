@@ -50,8 +50,10 @@
                 </div>
             </div>
             <div class="box-footer btn-box">
-                <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
-                <a href="?page=data_buku" class="btn btn-warning">Batal</a>
+                <div>
+                    <input type="submit" name="Ubah" value="Ubah" class="btn btn-success">
+                    <a href="?page=data_buku" class="btn btn-warning">Batal</a>
+                </div>
             </div>
         </form>
     </div>

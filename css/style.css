@@ -296,6 +296,12 @@ input[type=file]::-webkit-file-upload-button{
 .illustration-img {
     max-width: 150px;
     width: 100%;
+    padding: 20px;
+}
+
+.illustration-img-admin {
+    max-width: 150px;
+    width: 100%;
 }
 
 /* Sidebar Toggle */
