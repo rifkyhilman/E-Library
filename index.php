@@ -206,6 +206,9 @@
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <?php
+                        $path = "images/";
+                        $img404 = "404.png";
+
                         if (isset($_GET['page'])) {
                             $hal = $_GET['page'];
 
@@ -280,8 +283,10 @@
                                     include "pages/admin/log/log_kembali.php";
                                     break;
                                 default:
-                                    echo "<center><br><br><br><br><br><br><br><br><br>
-                                    <h1> Halaman tidak ditemukan !</h1></center>";
+                                    echo '<center><br><br><br><br><br><br><br><br><br>
+                                    <img src="'.$path.$img404.'" class="img-error">
+                                    <h3> Halaman tidak ditemukan !</h3></center>
+                                    <br><br><br><br><br><br><br><br><br>';
                                     break;
                             }
                         } else {
@@ -300,7 +305,7 @@
                         <div class="col-6 text-start">
                             <p class="mb-0">
                                 <a href="#" class="text-muted">
-                                    <strong>@2024</strong>
+                                    <strong>Perpustakaan Anugerah Abadi @2024</strong>
                                 </a>
                             </p>
                         </div>
@@ -323,10 +328,10 @@
                 language: {
                     info: 'Halaman _PAGE_ dari _PAGES_',
                     infoEmpty: 'Halaman _PAGE_ dari _PAGES_',
-                    emptyTable: 'Tidak ada Data',
+                    emptyTable: 'Tidak ada data',
                     lengthMenu: '_MENU_',
                     search: 'Filter:    ',
-                    zeroRecords: 'Data tidak ada'
+                    zeroRecords: 'Tidak ada data'
                 },
                 layout: {
                     topStart: 'pageLength',
