@@ -1,6 +1,6 @@
 <section class="container">
     <div class="nav-links">
-        <h5>Riwayat Peminjaman</h5>
+        <h5>Riwayat Peminjaman Buku [<?php echo $data_nama; ?>]</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>

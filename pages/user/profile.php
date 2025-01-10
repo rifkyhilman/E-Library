@@ -7,7 +7,7 @@
 ?>
 <section class="container">
     <div class="nav-links">
-        <h5>Biodata Pribadi</h5>
+        <h5>Biodata Pribadi [<?php echo $data_nama; ?>]</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/E-library/">Home</a></li>
@@ -21,7 +21,7 @@
                     <?php 
                         if($data_cek[6] !== ""){
                     ?>
-                        <img src="images/profile/<?php echo $data_cek[5] ?>" width=125 height=125 alt="foto_profile">
+                        <img src="images/profile/<?php echo $data_cek[6] ?>" width=125 height=125 alt="foto_profile">
                     <?php
                         } else  { 
                     ?>

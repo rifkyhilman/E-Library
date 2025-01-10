@@ -1,6 +1,6 @@
 <section class="container">
     <div class="nav-links">
-        <h5>Katalog Buku</h5>
+        <h5>Katalog Buku [<?php echo $data_nama; ?>]</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/E-library/">Home</a></li>
@@ -21,6 +21,9 @@
     </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <?php
+            $path = "images/";
+            $imgEmpety = "empty.png";
+
             if (isset($_POST['btnSearch'])) {  
                 $filter_value= $_POST['search'];
 
@@ -38,8 +41,11 @@
                                     <div class="col-md-8">
                                         <div class="card-body">
                                             <h5 class="card-title"><?php echo $data_buku['judul_buku']; ?></h5>
+                                            <p class="card-text"><small class="text-body-secondary">
+                                                <i class="fa-solid fa-user"></i> <?php echo $data_buku['pengarang']; ?>
+                                            </small></p>
                                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                            <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data_buku['penerbit']; ?> | <?php echo $data_buku['th_terbit']; ?> </small></p>                                        
                                         </div>
                                     </div>
                                 </div>
@@ -48,7 +54,15 @@
                     <?php  
                     }
                 }else {
-                    print_r("DATA Kaga ada di database");
+                    echo '
+                    <div style="margin-left: 250px;">
+                        <center>
+                            <br><br><br><br><br><br><br><br><br>
+                                <img src="'.$path.$imgEmpety.'" class="img-error">
+                                <h5> Buku tidak ditemukan !</h5>
+                            <br><br><br><br><br><br><br><br><br>
+                        </center>
+                    </div>';
                 }
             } else {
                 $sql = $koneksi->query("SELECT * from tb_buku");         
@@ -62,8 +76,11 @@
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $data['judul_buku']; ?></h5>
+                                        <p class="card-text"><small class="text-body-secondary">
+                                            <i class="fa-solid fa-user"></i> <?php echo $data['pengarang']; ?>
+                                        </small></p>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                        <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data['penerbit']; ?> | <?php echo $data['th_terbit']; ?> </small></p>
                                     </div>
                                 </div>
                             </div>

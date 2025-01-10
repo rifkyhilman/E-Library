@@ -304,6 +304,10 @@ input[type=file]::-webkit-file-upload-button{
     width: 100%;
 }
 
+.illustration-img-user {
+    width: 60%;
+}
+
 /* Sidebar Toggle */
 
 #sidebar.collapsed {
@@ -331,4 +335,8 @@ input[type=file]::-webkit-file-upload-button{
 footer {
     padding: 15px 0 15px 0;
     background-color: #ffffff;
+}
+
+.img-error {
+    width: 40%;
 }

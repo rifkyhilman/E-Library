@@ -32,7 +32,7 @@
 
 <section class="container">
     <div class="nav-links">
-        <h5>Admin Dashboard</h5>
+        <h5>Dashboard Admin</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -52,7 +52,7 @@
                                         <?php echo $data_nama; ?>
                                     </span>
                                 </h4>
-                                <p class="mb-0">Admin Dashboard</p>
+                                <p class="mb-0">Dashboard Admin</p>
                             </div>
                         </div>
                         <div class="col-6 align-self-end text-end">

@@ -8,7 +8,7 @@
 
 <section class="container">
     <div class="nav-links">
-        <h5>Edit Data Buku</h5>
+        <h5>Ubah Data Buku</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/E-Library/">Home</a></li>
