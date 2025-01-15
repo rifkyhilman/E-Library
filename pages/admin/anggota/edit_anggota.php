@@ -20,27 +20,27 @@
         <form action="" method="post" enctype="multipart/form-data">
             <div class="box-body">
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Id anggota</label>
-                    <input type='text' class="form-control inpt" name="id_anggota" value="<?php echo $data_cek['id_anggota']; ?>"
+                    <input type='text' class="form-control" name="id_anggota" value="<?php echo $data_cek['id_anggota']; ?>"
                         readonly/>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>NIS</label>
-                    <input type='number' class="form-control inpt" name="nis" value="<?php echo $data_cek['nis']; ?>"
+                    <input type='number' class="form-control" name="nis" value="<?php echo $data_cek['nis']; ?>"
                     />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Nama</label>
-                    <input type='text' class="form-control inpt" name="nama" value="<?php echo $data_cek['nama']; ?>"
+                    <input type='text' class="form-control" name="nama" value="<?php echo $data_cek['nama']; ?>"
                     />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Jenis Kelamin</label>
-                    <select name="jekel" id="jekel" class="form-control inpt" required>
+                    <select name="jekel" id="jekel" class="form-control" required>
                         <option value="">-- Pilih --</option>
                         <?php
                         //cek data yg dipilih sebelumnya
@@ -53,15 +53,15 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Kelas</label>
-                    <input type='text' class="form-control inpt" name="kelas" value="<?php echo $data_cek['kelas']; ?>"
+                    <input type='text' class="form-control" name="kelas" value="<?php echo $data_cek['kelas']; ?>"
                     />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>No HP</label>
-                    <input type='number' class="form-control inpt" name="no_hp" value="<?php echo $data_cek['no_hp']; ?>"
+                    <input type='number' class="form-control" name="no_hp" value="<?php echo $data_cek['no_hp']; ?>"
                     />
                 </div>
 

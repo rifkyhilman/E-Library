@@ -113,10 +113,6 @@ h4 {
 
 /* Tabel */
 
-.table_content tr td {
-    text-align: center;
-}
-
 .btn-box {
     display: flex;
     justify-content: space-between;

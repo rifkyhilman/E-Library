@@ -30,39 +30,39 @@ $kode_unik= strlen($tambah);
     <div class="box-page">
         <form action="" method="post" enctype="multipart/form-data">
             <div class="box-body">
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>ID anggota</label>
-                    <input type="text" name="id_anggota" id="id_anggota" class="form-control inpt" value="<?php echo $format; ?>"
+                    <input type="text" name="id_anggota" id="id_anggota" class="form-control" value="<?php echo $format; ?>"
                         readonly/>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>NIS</label>
-                    <input type="number" name="nis" id="nis" class="form-control inpt" placeholder="Nomor Induk Siswa">
+                    <input type="number" name="nis" id="nis" class="form-control" placeholder="Nomor Induk Siswa">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Nama Anggota</label>
-                    <input type="text" name="nama" id="nama" class="form-control inpt" placeholder="Nama Anggota">
+                    <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Anggota">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Jenis Kelamin</label>
-                    <select name="jekel" id="jekel" class="form-control inpt" required>
+                    <select name="jekel" id="jekel" class="form-control" required>
                         <option>-- Pilih --</option>
                         <option>Laki-laki</option>
                         <option>Perempuan</option>
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Kelas</label>
-                    <input type="text" name="kelas" id="kelas" class="form-control inpt" placeholder="Kelas">
+                    <input type="text" name="kelas" id="kelas" class="form-control" placeholder="Kelas">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>No HP</label>
-                    <input type="number" name="no_hp" id="no_hp" class="form-control inpt" placeholder="No HP">
+                    <input type="number" name="no_hp" id="no_hp" class="form-control" placeholder="No HP">
                 </div>
 
             </div>

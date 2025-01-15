@@ -28,14 +28,14 @@
     <div class="box-page">
         <form action="" method="post" enctype="multipart/form-data">
             <div class="box-body">
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Id Sirkulasi</label>
-                    <input type="text" name="id_sk" id="id_sk" class="form-control inpt"
+                    <input type="text" name="id_sk" id="id_sk" class="form-control"
                         value="<?php echo $format; ?>" readonly />
                 </div>
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Nama Peminjam</label>
-                    <select name="id_anggota" id="id_anggota" class="form-control inpt select2" style="width: 100%;">
+                    <select name="id_anggota" id="id_anggota" class="form-control select2" style="width: 100%;">
                         <option selected="selected">-- Pilih --</option>
                         <?php
                         // ambil data dari database
@@ -54,9 +54,9 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Buku</label>
-                    <select name="id_buku" id="id_buku" class="form-control inpt select2" style="width: 100%;">
+                    <select name="id_buku" id="id_buku" class="form-control select2" style="width: 100%;">
                         <option selected="selected">-- Pilih --</option>
                         <?php
                         // ambil data dari database
@@ -75,9 +75,9 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group inpt">
                     <label>Tgl Pinjam</label>
-                    <input type="date" name="tgl_pinjam" id="tgl_pinjam" class="form-control inpt" />
+                    <input type="date" name="tgl_pinjam" id="tgl_pinjam" class="form-control" />
                 </div>
 
             </div>
