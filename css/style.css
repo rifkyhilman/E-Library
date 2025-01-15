@@ -220,6 +220,7 @@ a.sidebar-link:hover {
 .upload img{
     border-radius: 50%;
     border: 8px solid #DCDCDC;
+    object-fit: cover;
 }
   
 .upload .round{
@@ -246,8 +247,10 @@ input[type=file]::-webkit-file-upload-button{
 }
 
 .avatar{
-    width: 33px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .profile-name {
