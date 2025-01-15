@@ -30,6 +30,14 @@ h4 {
     color: var(--bs-emphasis-color);
 }
 
+
+/* Layout for member*/
+
+.cover-img{
+    object-fit: cover;
+}
+
+
 /* Layout for admin dashboard skeleton */
 
 .wrapper {

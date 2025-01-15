@@ -36,7 +36,7 @@
                             <div class="card">
                                 <div class="row g-0">
                                     <div class="col-md-4">
-                                        <img src="images/buku/<?php echo $data_buku['gambar']; ?>" class="img-fluid rounded-start" alt="Sampul Buku">
+                                        <img src="images/buku/<?php echo $data_buku['gambar']; ?>" class="img-fluid rounded-start cover-img" alt="Sampul Buku">
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
@@ -71,7 +71,7 @@
                         <div class="card">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="images/buku/<?php echo $data['gambar']; ?>" class="img-fluid rounded-start" alt="Sampul Buku">
+                                    <img src="images/buku/<?php echo $data['gambar']; ?>" class="img-fluid rounded-start cover-img" alt="Sampul Buku">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
