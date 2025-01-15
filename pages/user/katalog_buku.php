@@ -44,7 +44,7 @@
                                             <p class="card-text"><small class="text-body-secondary">
                                                 <i class="fa-solid fa-user"></i> <?php echo $data_buku['pengarang']; ?>
                                             </small></p>
-                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"> <?php echo $data_buku['deskripsi']; ?></p>
                                             <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data_buku['penerbit']; ?> | <?php echo $data_buku['th_terbit']; ?> </small></p>                                        
                                         </div>
                                     </div>
@@ -79,7 +79,7 @@
                                         <p class="card-text"><small class="text-body-secondary">
                                             <i class="fa-solid fa-user"></i> <?php echo $data['pengarang']; ?>
                                         </small></p>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text" rows="3"><?php echo $data['deskripsi']; ?></p>
                                         <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data['penerbit']; ?> | <?php echo $data['th_terbit']; ?> </small></p>
                                     </div>
                                 </div>

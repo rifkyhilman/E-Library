@@ -39,27 +39,26 @@ if (strlen($tambah) == 1){
                     <label>Judul Buku</label>
                     <input type="text" name="judul_buku" id="judul_buku" class="form-control" placeholder="Judul Buku" required>
                 </div>
-
+                <div class="form-group inpt">
+                    <label>Deskripsi</label>
+                    <textarea  type="text" name="deskripsi" id="deskripsi" class="form-control" rows="3" placeholder="Deskripsi Buku" required></textarea>
+                </div>
                 <div class="form-group inpt">
                     <label>Pengarang</label>
                     <input type="text" name="pengarang" id="pengarang" class="form-control" placeholder="Nama Pengarang" required>
                 </div>
-
                 <div class="form-group inpt">
                     <label>Penerbit</label>
                     <input type="text" name="penerbit" id="penerbiit" class="form-control" placeholder="Penerbit" required>
                 </div>
-
                 <div class="form-group inpt">
                     <label>Tahun Terbit</label>
                     <input type="number" name="th_terbit" id="th_terbit" class="form-control" placeholder="Tahun Terbit" required>
                 </div>
-
                 <div class="form-group inpt">
                     <label>Sampul Buku</label>
                     <input type="file" class="form-control" id="inputGroupFile04" name="uploaded_file" accept=".jpg, .jpeg, .png" required>
                 </div>
-
             </div>
             
             <!-- /.box-body -->
@@ -78,9 +77,10 @@ if (strlen($tambah) == 1){
 
     if (isset ($_POST['Simpan'])){
     
-        $sql_simpan = "INSERT INTO tb_buku (id_buku,judul_buku,gambar,pengarang,penerbit,th_terbit) VALUES (
+        $sql_simpan = "INSERT INTO tb_buku (id_buku,judul_buku,deskripsi,gambar,pengarang,penerbit,th_terbit) VALUES (
             '".$_POST['id_buku']."',
             '".$_POST['judul_buku']."',
+            '".$_POST['deskripsi']."',
             '".$_FILES["uploaded_file"]["name"]."',
             '".$_POST['pengarang']."',
             '".$_POST['penerbit']."',

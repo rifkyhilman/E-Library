@@ -31,6 +31,10 @@
                     />
                 </div>
                 <div class="form-group inpt">
+                    <label>Deskripsi</label>
+                    <textarea  type="text" name="deskripsi" class="form-control" rows="3" value="<?php echo $data_cek['deskripsi']; ?>"></textarea>
+                </div>
+                <div class="form-group inpt">
                     <label>Pengarang</label>
                     <input type='text' class="form-control" name="pengarang" value="<?php echo $data_cek['pengarang']; ?>"
                     />
@@ -69,6 +73,7 @@ if (isset ($_POST['Ubah'])){
     if($file_gambar !== ""){
         $sql_ubah = "UPDATE tb_buku SET
             judul_buku='".$_POST['judul_buku']."',
+            deskripsi='".$_POST['deskripsi']."',
             gambar='".$_FILES["uploaded_file"]["name"]."',
             pengarang='".$_POST['pengarang']."',
             penerbit='".$_POST['penerbit']."',
@@ -110,6 +115,7 @@ if (isset ($_POST['Ubah'])){
     }else {
         $sql_ubah = "UPDATE tb_buku SET
             judul_buku='".$_POST['judul_buku']."',
+            deskripsi='".$_POST['deskripsi']."',
             pengarang='".$_POST['pengarang']."',
             penerbit='".$_POST['penerbit']."',
             th_terbit='".$_POST['th_terbit']."'
