@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group inpt">
                     <label>Deskripsi</label>
-                    <textarea  type="text" name="deskripsi" class="form-control" rows="3" value="<?php echo $data_cek['deskripsi']; ?>"></textarea>
+                    <textarea  type="text" name="deskripsi" class="form-control" rows="3"><?php echo $data_cek['deskripsi']; ?></textarea>
                 </div>
                 <div class="form-group inpt">
                     <label>Pengarang</label>
