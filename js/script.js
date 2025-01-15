@@ -10,11 +10,11 @@ const date = new Date();
 const hari = date.getDay();
 const bulan = date.getMonth();
 const tahun = date.getFullYear();
-let tanggal = null;
+let tanggal = date.getDate();
 const arrBulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
 const arrHari = ["Minggu","Senin","Selasa","Rabu","Kamis","Juma'at","Sabtu"];
 
-if(tanggal <= 10){
+if(tanggal < 10){
     tanggal = "0" + date.getDate();
 }else {
     tanggal = date.getDate();

@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group inpt">
                     <label>Sampul Buku</label>
-                    <input type="file" class="form-control" id="inputGroupFile04" name="uploaded_file" accept=".jpg, .jpeg, .png" required>
+                    <input type="file" class="form-control" id="inputGroupFile04" name="uploaded_file" accept=".jpg, .jpeg, .png">
                 </div>
             </div>
             <div class="box-footer btn-box">
@@ -63,47 +63,88 @@
 <?php
 
 if (isset ($_POST['Ubah'])){
-    //mulai proses ubah
-    $sql_ubah = "UPDATE tb_buku SET
-        judul_buku='".$_POST['judul_buku']."',
-        gambar='".$_FILES["uploaded_file"]["name"]."',
-        pengarang='".$_POST['pengarang']."',
-        penerbit='".$_POST['penerbit']."',
-        th_terbit='".$_POST['th_terbit']."'
-        WHERE id_buku='".$_POST['id_buku']."'";
-    $filename = $_FILES["uploaded_file"]["name"];
-    $tempname = $_FILES["uploaded_file"]["tmp_name"];
-    $folder = "images/buku/".$filename;
-    move_uploaded_file($tempname, $folder);
-        
-    $query_ubah = mysqli_query($koneksi, $sql_ubah);
+    
+    $file_gambar = $_FILES["uploaded_file"]["name"];
 
-    if ($query_ubah) {
-        echo "
-        <script>
-        Swal.fire({
-            title: 'Ubah Data Buku Berhasil',
-            text: '',
-            icon: 'success',
-            confirmButtonText: 'OK'
-        }).then((result) => {
-            if (result.value) {
-                window.location = '?page=data_buku';
+    if($file_gambar !== ""){
+        $sql_ubah = "UPDATE tb_buku SET
+            judul_buku='".$_POST['judul_buku']."',
+            gambar='".$_FILES["uploaded_file"]["name"]."',
+            pengarang='".$_POST['pengarang']."',
+            penerbit='".$_POST['penerbit']."',
+            th_terbit='".$_POST['th_terbit']."'
+            WHERE id_buku='".$_POST['id_buku']."'";
+        $filename = $_FILES["uploaded_file"]["name"];
+        $tempname = $_FILES["uploaded_file"]["tmp_name"];
+        $folder = "images/buku/".$filename;
+        move_uploaded_file($tempname, $folder);
+            
+        $query_ubah = mysqli_query($koneksi, $sql_ubah);
+
+        if ($query_ubah) {
+            echo "
+                <script>
+                Swal.fire({
+                    title: 'Ubah Data Buku Berhasil',
+                    text: '',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.value) {
+                        window.location = '?page=data_buku';
+                    }
+                })</script>";
+            }else{
+                echo "<script>
+                Swal.fire({
+                    title: 'Ubah Data Buku Gagal',
+                    text: '',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.value) {
+                        window.location = '?page=data_buku';
+                    }
+                })</script>";
             }
-        })</script>";
-        }else{
-        echo "<script>
-        Swal.fire({
-            title: 'Ubah Data Buku Gagal',
-            text: '',
-            icon: 'error',
-            confirmButtonText: 'OK'
-        }).then((result) => {
-            if (result.value) {
-                window.location = '?page=data_buku';
-            }
-        })</script>";
-    }
+    }else {
+        $sql_ubah = "UPDATE tb_buku SET
+            judul_buku='".$_POST['judul_buku']."',
+            pengarang='".$_POST['pengarang']."',
+            penerbit='".$_POST['penerbit']."',
+            th_terbit='".$_POST['th_terbit']."'
+            WHERE id_buku='".$_POST['id_buku']."'";
+
+        $query_ubah = mysqli_query($koneksi, $sql_ubah);
+
+        if ($query_ubah) {
+            echo "
+            <script>
+            Swal.fire({
+                title: 'Ubah Data Buku Berhasil',
+                text: '',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = '?page=data_buku';
+                }
+            })</script>";
+            }else{
+            echo "<script>
+            Swal.fire({
+                title: 'Ubah Data Buku Gagal',
+                text: '',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = '?page=data_buku';
+                }
+            })</script>";
+        }
+    };
+
 }
 
 ?>
