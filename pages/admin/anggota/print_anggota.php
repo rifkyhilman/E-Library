@@ -25,9 +25,12 @@
 		<link rel="stylesheet" href="assets_style/assets/bower_components/font-awesome/css/font-awesome.min.css">
 		<title><?= $title_web;?></title>
 		<style>
-			body {
-				background: rgba(0,0,0,0.2);
+	
+			.card-agt {
+				padding: 50px;
+				border: 2px solid black;
 			}
+
 			page[size="A4"] {
 				background: white;
 				width: 21cm;
@@ -65,10 +68,10 @@
         <div id="printableArea">
             <page size="A4">
 				<div class="panel panel-default">
-					<div class="panel-body bg-primary">
+					<div class="panel-body">
 						<h4 class="text-center">KARTU ANGGOTA PERPUSTAKAAN</h4>
-						<br/>
-						<div class="row">
+						<br></br>
+						<div class="row card-agt">
 							<div class="col-sm-8">
 								<table class="table table-stripped">
 								<?php
@@ -85,8 +88,15 @@
 										</td>
 									</tr>
 									<tr>
+										<td>NIS</td>
+										<td>:</td>
+										<td>
+											<?php echo $data['nis']; ?>
+										</td>
+									</tr>
+									<tr>
 										<td>Nama</td>
-											<td>:</td>
+										<td>:</td>
 										<td>
 										<?php echo $data['nama']; ?>
 										</td>
