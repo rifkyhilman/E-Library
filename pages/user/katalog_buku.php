@@ -1,6 +1,6 @@
 <section class="container">
     <div class="nav-links">
-        <h5>Katalog Buku [<?php echo $data_nama; ?>]</h5>
+        <h5>Katalog Buku [<?php echo $data_agt[1]; ?>]</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/E-library/">Home</a></li>

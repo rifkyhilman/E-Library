@@ -80,7 +80,6 @@
 		if ($jumlah_login == 1 ){
 			session_start();
 			$_SESSION["ses_id"]=$data_login["id_pengguna"];
-			$_SESSION["ses_nama"]=$data_login["nama_pengguna"];
 			$_SESSION["ses_username"]=$data_login["username"];
 			$_SESSION["ses_password"]=$data_login["password"];
 			$_SESSION["ses_level"]=$data_login["level"];

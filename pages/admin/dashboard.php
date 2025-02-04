@@ -49,7 +49,7 @@
                             <div class="p-3 m-1">
                                 <h4>Selamat Datang, 
                                     <span>
-                                        <?php echo $data_nama; ?>
+                                        <?php echo $data_user; ?>
                                     </span>
                                 </h4>
                                 <p class="mb-0">Dashboard Admin</p>

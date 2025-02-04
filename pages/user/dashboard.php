@@ -1,6 +1,6 @@
 <section class="container">
     <div class="nav-links">
-        <h5>Hai <?php echo $data_nama; ?></h5>
+        <h5>Hai <?php echo $data_agt[1]; ?></h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/E-Library">Home</a></li>
@@ -15,7 +15,7 @@
                     <div class="row g-0 w-100">
                         <div class="col-6">
                             <div class="p-3 m-1">
-                                <h5>Selamat Datang di Perpustakaan<b> Anugrah Abadi </b></h5>
+                                <h5>Selamat Datang di Perpustakaan<b> Sekolah Anugrah Abadi </b></h5>
                                 <br>
                                 <p class="mb-0">Dashboard Anggota</p>
                             </div>

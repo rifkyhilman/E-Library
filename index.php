@@ -6,11 +6,10 @@
         header("location: pages/auth/login.php");
     } else {
         $data_id = $_SESSION["ses_id"];
-        $data_nama = $_SESSION["ses_nama"];
         $data_user = $_SESSION["ses_username"];
         $data_level = $_SESSION["ses_level"];
 
-		$sql_getAgt = "SELECT id_anggota, foto_profile FROM tb_anggota WHERE BINARY nama='$data_nama'";
+		$sql_getAgt = "SELECT id_anggota, nama, foto_profile FROM tb_anggota WHERE BINARY username='$data_user'";
 		$query_getAgt = mysqli_query($koneksi, $sql_getAgt);
 		$data_agt = mysqli_fetch_array($query_getAgt,MYSQLI_BOTH);
     }
@@ -186,19 +185,30 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <?php 
-                                if($data_level === "Anggota"&& $data_agt[1] !== ""){
+                                if($data_level === "Anggota"&& $data_agt[2] !== ""){
                             ?>
-                                <img src="images/profile/<?php echo $data_agt[1] ?>" class="avatar" alt="">
+                                <img src="images/profile/<?php echo $data_agt[2] ?>" class="avatar" alt="">        
+                                <span class="profile-name">
+                                    <?php echo $data_agt[1]; ?>
+                                </span>
                             <?php
-                                } else  { 
+                                }elseif($data_level === "Admin")  { 
                             ?>
                                 <img src="images/profile.png" class="avatar" alt="">
+                                <span class="profile-name">
+                                    <?php echo $data_user; ?>
+                                </span>
                             <?php 
+                                }else {
+                            ?>
+                                <img src="images/profile.png" class="avatar" alt="">
+                                <span class="profile-name">
+                                    <?php echo $data_agt[1]; ?>
+                                </span>
+                            <?php
                                 };
                             ?>
-                            <span class="profile-name">
-                                <?php echo $data_nama; ?>
-                            </span>
+                    
                         </li>
                     </ul>
                 </div>

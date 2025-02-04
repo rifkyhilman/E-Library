@@ -92,10 +92,11 @@
 
     if (isset ($_POST['btnRegister'])){
     
-        $sql_simpan = "INSERT INTO tb_anggota (id_anggota,nama,jekel,kelas,no_hp) 
+        $sql_simpan = "INSERT INTO tb_anggota (id_anggota,nama,username,jekel,kelas,no_hp) 
             VALUES (
                 '".$format."',
                 '".$_POST['nama']."',
+                '".$_POST['username']."',
                 '".null."',
                 '".null."',
                 '".null."' )";

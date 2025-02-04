@@ -1,6 +1,6 @@
 <section class="container">
     <div class="nav-links">
-        <h5>Riwayat Peminjaman Buku [<?php echo $data_nama; ?>]</h5>
+        <h5>Riwayat Peminjaman Buku [<?php echo $data_agt[1]; ?>]</h5>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -35,7 +35,7 @@
                     tb_sirkulasi.tgl_dikembalikan,
                     if(datediff(now( ) , tb_sirkulasi.tgl_kembali)<=0,0,datediff(now( ) , tb_sirkulasi.tgl_kembali) ) telat_pengembalian FROM tb_sirkulasi 
                     JOIN tb_anggota ON tb_anggota.id_anggota=tb_sirkulasi.id_anggota 
-                    JOIN tb_buku ON tb_buku.id_buku=tb_sirkulasi.id_buku WHERE tb_sirkulasi.status='KEM' AND tb_anggota.nama='$data_nama'
+                    JOIN tb_buku ON tb_buku.id_buku=tb_sirkulasi.id_buku WHERE tb_sirkulasi.status='KEM' AND tb_anggota.nama='$data_agt[1]'
                     Order By id_anggota");
 
                     // $data=mysqli_fetch_array($sql,MYSQLI_ASSOC);
