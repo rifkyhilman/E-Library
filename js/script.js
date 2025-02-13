@@ -12,7 +12,7 @@ const bulan = date.getMonth();
 const tahun = date.getFullYear();
 let tanggal = date.getDate();
 const arrBulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
-const arrHari = ["Minggu","Senin","Selasa","Rabu","Kamis","Juma'at","Sabtu"];
+const arrHari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu"];
 
 if(tanggal < 10){
     tanggal = "0" + date.getDate();

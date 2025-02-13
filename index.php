@@ -67,12 +67,32 @@
                             <li class="sidebar-item">
                                 <a href="?page=data_buku" class="sidebar-subs">
                                     <i class="fa-solid fa-book pe-2"></i>
-                                    Data Buku</a>
+                                    <span>
+                                        Daftar Buku
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="?page=data_buku" class="sidebar-subs">
+                                    <i class="fa-solid fa-book-medical pe-2"></i>
+                                    <span>
+                                        Buku Tersedia
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="?page=data_buku" class="sidebar-subs">
+                                    <i class="fa-solid fa-book-skull pe-2"></i>
+                                    <span>
+                                        Buku Tidak Tersedia    
+                                    </span>
+                                </a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="?page=data_anggota" class="sidebar-subs">
                                     <i class="fa-solid fa-users pe-2"></i>
-                                    Data Anggota</a>
+                                    Data Anggota
+                                </a>
                             </li>
                         </ul>
                     </li>

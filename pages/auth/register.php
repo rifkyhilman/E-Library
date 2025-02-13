@@ -65,7 +65,7 @@
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <div class="d-flex position-relative">
-                                    <input type="password" name="password" class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3">
+                                    <input type="password" name="password" class="form-control text-indent auth__password shadow-sm bg-grey-light border-0 rounded-pill fw-lighter fs-7 p-3" placeholder="*******" Required>
                                     <span class="password__icon text-primary fs-4 fw-bold bi bi-eye-slash"></span>
                                 </div>
                             </div>

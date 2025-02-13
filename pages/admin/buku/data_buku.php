@@ -25,6 +25,7 @@
 							<th>Pengarang</th>
 							<th>Penerbit</th>
 							<th>Tahun</th>
+							<th>Jumlah Buku</th>
 							<th>Kelola</th>
 						</tr>
 					</thead>
@@ -35,7 +36,7 @@
 							while ($data= $sql->fetch_assoc()) {
 						?>
 						<tr>
-							<td>
+							<td class="text-center">
 								<?php echo $no++; ?>
 							</td>
 							<td>
@@ -53,7 +54,9 @@
 							<td>
 								<?php echo $data['th_terbit']; ?>
 							</td>
-
+							<td class="text-center">
+								<?php echo $data['kuantitas']; ?>
+							</td>
 							<td>
 								<a href="?page=edit_buku&kode=<?php echo $data['id_buku']; ?>" title="Ubah"
 								 class="btn btn-success">
