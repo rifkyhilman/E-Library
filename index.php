@@ -73,7 +73,7 @@
                                 </a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="?page=data_buku" class="sidebar-subs">
+                                <a href="?page=data_buku_ready" class="sidebar-subs">
                                     <i class="fa-solid fa-book-medical pe-2"></i>
                                     <span>
                                         Buku Tersedia
@@ -81,10 +81,10 @@
                                 </a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="?page=data_buku" class="sidebar-subs">
+                                <a href="?page=data_buku_borrowed" class="sidebar-subs">
                                     <i class="fa-solid fa-book-skull pe-2"></i>
                                     <span>
-                                        Buku Tidak Tersedia    
+                                        Buku Terpinjam    
                                     </span>
                                 </a>
                             </li>
@@ -257,6 +257,12 @@
                                     break;
                                 case 'riwayat_pjm':
                                     include "pages/user/riwayat_pinjam.php";
+                                    break;
+                                case 'data_buku_ready':
+                                    include "pages/admin/buku/data_buku_ready.php";
+                                    break;
+                                case 'data_buku_borrowed':
+                                    include "pages/admin/buku/data_buku_borrowed.php";
                                     break;
                                 case 'data_buku':
                                     include "pages/admin/buku/data_buku.php";
