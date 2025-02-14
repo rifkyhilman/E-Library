@@ -73,18 +73,10 @@
                                 </a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="?page=data_buku_ready" class="sidebar-subs">
+                                <a href="?page=status_buku" class="sidebar-subs">
                                     <i class="fa-solid fa-book-medical pe-2"></i>
                                     <span>
-                                        Buku Tersedia
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="?page=data_buku_borrowed" class="sidebar-subs">
-                                    <i class="fa-solid fa-book-skull pe-2"></i>
-                                    <span>
-                                        Buku Terpinjam    
+                                        Status Buku 
                                     </span>
                                 </a>
                             </li>
@@ -258,14 +250,11 @@
                                 case 'riwayat_pjm':
                                     include "pages/user/riwayat_pinjam.php";
                                     break;
-                                case 'data_buku_ready':
-                                    include "pages/admin/buku/data_buku_ready.php";
-                                    break;
-                                case 'data_buku_borrowed':
-                                    include "pages/admin/buku/data_buku_borrowed.php";
-                                    break;
                                 case 'data_buku':
                                     include "pages/admin/buku/data_buku.php";
+                                    break;
+                                case 'status_buku':
+                                    include "pages/admin/buku/status_buku.php";
                                     break;
                                 case 'add_buku':
                                     include "pages/admin/buku/add_buku.php";
