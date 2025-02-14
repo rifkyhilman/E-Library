@@ -38,7 +38,7 @@
                             s.tgl_kembali
                             from tb_sirkulasi s inner join tb_buku b on s.id_buku=b.id_buku
                             inner join tb_anggota a on s.id_anggota=a.id_anggota where status='PIN' order by tgl_pinjam desc");
-                                    while ($data = $sql->fetch_assoc()) {
+                            while ($data = $sql->fetch_assoc()) {
 						?>
 
 							<tr>
@@ -58,11 +58,11 @@
 								</td>
 								<td>
 									<?php $tgl = $data['tgl_pinjam'];
-									echo date("d/M/Y", strtotime($tgl)) ?>
+									echo date("d-M-Y", strtotime($tgl)) ?>
 								</td>
 								<td>
 									<?php $tgl = $data['tgl_kembali'];
-									echo date("d/M/Y", strtotime($tgl)) ?>
+									echo date("d-M-Y", strtotime($tgl)) ?>
 								</td>
 
 								<?php

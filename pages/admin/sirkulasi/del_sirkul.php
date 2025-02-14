@@ -1,7 +1,10 @@
 <?php
     if(isset($_GET['kode'])){
-        $sql_ubah = "UPDATE tb_sirkulasi SET status='KEM' WHERE id_sk='".$_GET['kode']."'";
+
+        $sql_ubah = "UPDATE tb_sirkulasi s JOIN tb_buku b ON s.id_buku = b.id_buku SET s.status='KEM', b.buku_tersedia= b.buku_tersedia+1 WHERE s.id_sk='".$_GET['kode']."'";
+
         $query_ubah = mysqli_query($koneksi, $sql_ubah);
+
 
         if ($query_ubah) {
             echo "<script>

@@ -4,7 +4,7 @@ sidebarToggle.addEventListener("click",function(){
     document.querySelector("#sidebar").classList.toggle("collapsed");
 }); 
 
-
+// --------------------------------------------------------------------------------
 
 const date = new Date();
 const hari = date.getDay();
@@ -22,3 +22,10 @@ if(tanggal < 10){
 const WaktuTerkini = `${arrHari[hari]}, ${tanggal}  ${arrBulan[bulan]} ${tahun}`;
 
 document.getElementById("Date_Time").innerHTML = WaktuTerkini;
+
+// --------------------------------------------------------------------------------
+
+let inputTanggal = document.getElementById("tgl_pinjam");
+let tanggalHariIni = date.toISOString().split('T')[0];
+
+inputTanggal.value = tanggalHariIni;
