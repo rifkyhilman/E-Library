@@ -43,14 +43,18 @@
                                             <h5 class="card-title"><?php echo $data_buku['judul_buku']; ?></h5>
                                             <p class="card-text">
                                                 <small class="text-body-secondary">
-                                                    <i class="fa-solid fa-user"></i> <?php echo $data_buku['pengarang']; ?> | Stok :  <?php echo $data_buku['buku_tersedia']; ?>
+                                                    <i class="fa-solid fa-user"></i> <?php echo $data_buku['pengarang']; ?>
                                                 </small>
                                             </p>
                                             <p class="card-text"> <?php echo $data_buku['deskripsi']; ?></p>
-                                            <p class="card-text"><small class="text-body-secondary">
-                                                Penerbit : <?php echo $data_buku['penerbit']; ?> | 
-                                                <?php echo $data_buku['th_terbit']; ?> 
-                                            </small></p>                                        
+                                            <div class="d-flex justify-content-between">
+                                                <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data_buku['penerbit']; ?> | <?php echo $data_buku['th_terbit']; ?> </small></p>
+                                                <p class="card-text">
+                                                    <small>
+                                                        Stok : <?php echo $data_buku['buku_tersedia']; ?>
+                                                    </small>
+                                                </p>
+                                            </div>                                       
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +89,14 @@
                                             <i class="fa-solid fa-user"></i> <?php echo $data['pengarang']; ?>
                                         </small></p>
                                         <p class="card-text" rows="3"><?php echo $data['deskripsi']; ?></p>
-                                        <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data['penerbit']; ?> | <?php echo $data['th_terbit']; ?> </small></p>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data['penerbit']; ?> | <?php echo $data['th_terbit']; ?> </small></p>
+                                            <p class="card-text">
+                                                <small>
+                                                    Stok : <?php echo $data['buku_tersedia']; ?>
+                                                </small>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
