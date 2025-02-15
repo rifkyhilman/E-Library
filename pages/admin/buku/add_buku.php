@@ -56,6 +56,10 @@ if (strlen($tambah) == 1){
                     <input type="number" name="th_terbit" id="th_terbit" class="form-control" placeholder="Tahun Terbit" required>
                 </div>
                 <div class="form-group inpt">
+                    <label>Stok Buku</label>
+                    <input type="number" name="kunatitas" id="kuantitas" class="form-control" placeholder="Stok Buku" required>
+                </div>
+                <div class="form-group inpt">
                     <label>Sampul Buku</label>
                     <input type="file" class="form-control" id="inputGroupFile04" name="uploaded_file" accept=".jpg, .jpeg, .png" required>
                 </div>
@@ -77,14 +81,16 @@ if (strlen($tambah) == 1){
 
     if (isset ($_POST['Simpan'])){
     
-        $sql_simpan = "INSERT INTO tb_buku (id_buku,judul_buku,deskripsi,gambar,pengarang,penerbit,th_terbit) VALUES (
+        $sql_simpan = "INSERT INTO tb_buku (id_buku,judul_buku,deskripsi,gambar,pengarang,penerbit,th_terbit,kuantitas,buku_tersedia) VALUES (
             '".$_POST['id_buku']."',
             '".$_POST['judul_buku']."',
             '".$_POST['deskripsi']."',
             '".$_FILES["uploaded_file"]["name"]."',
             '".$_POST['pengarang']."',
             '".$_POST['penerbit']."',
-            '".$_POST['th_terbit']."')";
+            '".$_POST['th_terbit']."',
+            '".$_POST['kuantitas']."',
+            '".$_POST['kuantitas']."')";
 
         $filename = $_FILES["uploaded_file"]["name"];
         $tempname = $_FILES["uploaded_file"]["tmp_name"];

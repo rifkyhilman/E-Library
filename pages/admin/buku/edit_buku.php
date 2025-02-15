@@ -49,6 +49,10 @@
                     <input class="form-control" name="th_terbit" value="<?php echo $data_cek['th_terbit']; ?>">
                 </div>
                 <div class="form-group inpt">
+                    <label>Stok Buku</label>
+                    <input class="form-control" name="kuantitas" value="<?php echo $data_cek['kuantitas']; ?>">
+                </div>
+                <div class="form-group inpt">
                     <label>Sampul Buku</label>
                     <input type="file" class="form-control" id="inputGroupFile04" name="uploaded_file" accept=".jpg, .jpeg, .png">
                 </div>
@@ -75,9 +79,10 @@ if (isset ($_POST['Ubah'])){
             judul_buku='".$_POST['judul_buku']."',
             deskripsi='".$_POST['deskripsi']."',
             gambar='".$_FILES["uploaded_file"]["name"]."',
-            pengarang='".$_POST['pengarang']."',
+            pengarang='".$_POST['pengarang']."', 
             penerbit='".$_POST['penerbit']."',
-            th_terbit='".$_POST['th_terbit']."'
+            th_terbit='".$_POST['th_terbit']."',
+            kuantitas='".$_POST['kuantitas']."'
             WHERE id_buku='".$_POST['id_buku']."'";
         $filename = $_FILES["uploaded_file"]["name"];
         $tempname = $_FILES["uploaded_file"]["tmp_name"];
