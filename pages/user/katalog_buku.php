@@ -41,11 +41,16 @@
                                     <div class="col-md-8">
                                         <div class="card-body">
                                             <h5 class="card-title"><?php echo $data_buku['judul_buku']; ?></h5>
-                                            <p class="card-text"><small class="text-body-secondary">
-                                                <i class="fa-solid fa-user"></i> <?php echo $data_buku['pengarang']; ?>
-                                            </small></p>
+                                            <p class="card-text">
+                                                <small class="text-body-secondary">
+                                                    <i class="fa-solid fa-user"></i> <?php echo $data_buku['pengarang']; ?> | Stok :  <?php echo $data_buku['buku_tersedia']; ?>
+                                                </small>
+                                            </p>
                                             <p class="card-text"> <?php echo $data_buku['deskripsi']; ?></p>
-                                            <p class="card-text"><small class="text-body-secondary">Penerbit: <?php echo $data_buku['penerbit']; ?> | <?php echo $data_buku['th_terbit']; ?> </small></p>                                        
+                                            <p class="card-text"><small class="text-body-secondary">
+                                                Penerbit : <?php echo $data_buku['penerbit']; ?> | 
+                                                <?php echo $data_buku['th_terbit']; ?> 
+                                            </small></p>                                        
                                         </div>
                                     </div>
                                 </div>
